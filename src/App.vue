@@ -12,7 +12,7 @@
         ><input
           class="tel-input"
           type="tel"
-          placeholder="Enter your mobile number"
+          placeholder="Enter your email:"
         />
       </div>
       <a href="/"
