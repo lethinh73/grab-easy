@@ -102,6 +102,6 @@ body {
 
 .enter-btn {
   margin-top: 10px;
-  margin-left: 30px;
+  margin-left: 40px;
 }
 </style>
