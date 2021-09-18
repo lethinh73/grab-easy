@@ -1,24 +1,20 @@
 <template>
-  <div class="top-container">
-    <img class="logo" src="./images/grabeasy.png" alt="logo" />
-    <div class="fs-3 intro">
+  <div class="">
+    <img class="" src="./images/grabeasy.png" alt="logo" />
+  </div>
+
+  <div class="">
+    <div class="">
       Hey there, Let's get started.
       <p>Enter your mobile number</p>
     </div>
-
-    <div class="bottom-container">
-      <div class="phone-box">
-        <span>+1</span
-        ><input
-          class="tel-input"
-          type="tel"
-          placeholder="Enter your mobile number"
-        />
-      </div>
-      <a href="/"
-        ><img class="enter-btn" src="./images/doubleleft.svg" alt="enter-btn"
-      /></a>
+    <div class="">
+      <span>+1</span
+      ><input class="" type="tel" placeholder="Enter your mobile number" />
     </div>
+    <a href="/"
+      ><img class="" src="./images/doubleleft.svg" alt="enter-btn"
+    /></a>
   </div>
 </template>
 
@@ -29,7 +25,14 @@ export default {
 </script>
 
 <style>
+* {
+  border: 1px solid white;
+  box-sizing: border-box;
+}
+
 body {
+  color: white;
+  margin: 0;
   background-color: black;
 }
 </style>
