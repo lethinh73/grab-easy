@@ -1,20 +1,29 @@
 <template>
-  <div class="">
-    <img class="" src="./images/grabeasy.png" alt="logo" />
-  </div>
+  <div class="container-fluid h-100">
+    <div class="row justify-content-center">
+      <div class="col-4">
+        <img class="col-12" src="./images/grabeasy.png" alt="logo" />
+      </div>
+    </div>
 
-  <div class="">
-    <div class="">
-      Hey there, Let's get started.
-      <p>Enter your mobile number</p>
+    <div class="row justify-content-center">
+      <div class="row justify-content-center">
+        <div class="col-4 flex-start">
+          <p style="">
+            Hey there, Let's get started.<br />Enter your mobile number
+          </p>
+        </div>
+      </div>
+
+      <div class="row justify-content-center">
+        <div class="col-4 flex-start">
+          <input type="tel" />
+          <a href="/"
+            ><img class="btn" src="./images/doubleleft.svg" alt="enter-btn"
+          /></a>
+        </div>
+      </div>
     </div>
-    <div class="">
-      <span>+1</span
-      ><input class="" type="tel" placeholder="Enter your mobile number" />
-    </div>
-    <a href="/"
-      ><img class="" src="./images/doubleleft.svg" alt="enter-btn"
-    /></a>
   </div>
 </template>
 
@@ -26,11 +35,11 @@ export default {
 
 <style>
 * {
-  border: 1px solid white;
   box-sizing: border-box;
 }
 
 body {
+  font-family: "Roboto";
   color: white;
   margin: 0;
   background-color: black;
