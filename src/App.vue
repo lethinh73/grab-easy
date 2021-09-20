@@ -31,7 +31,9 @@
             class="enter-btn"
             v-on:click="addChat()"
             v-on:keydown.enter="addChat()"
-          ></button>
+          >
+            <img src="./images/doubleleft.svg" />
+          </button>
         </div>
       </div>
       <!-- End input section -->
@@ -42,19 +44,23 @@
 
 <script>
 let step = 1;
-let phoneNumber = 0;
+let phoneNumber = "";
 
 export default {
   name: "App",
 
   methods: {
     addChat: function() {
-      console.log(step);
       if (step === 1) {
         phoneNumber = document.querySelector("#input-content").value;
-        this.printUserChat();
-        this.printBotChat("Enter the received OTP on +1" + phoneNumber);
-        step++;
+        console.log(phoneNumber.length);
+        if (phoneNumber.length >= 10) {
+          this.printUserChat();
+          this.printBotChat("Enter the received OTP on +1" + phoneNumber);
+          step++;
+        } else {
+          this.printBotChat("Please enter your phone number again!");
+        }
       } else if (step === 2) {
         this.printUserChat();
         this.printBotChat("We are working on this!!!");

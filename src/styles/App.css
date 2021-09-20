@@ -7,6 +7,9 @@ body {
   color: white;
   margin: 0;
   background-color: black;
+  position: fixed;
+  height: 100%;
+  width: 100%;
 }
 
 .view {
@@ -41,7 +44,7 @@ body {
 .bottom.row {
   width: 100%;
   height: fit-content;
-  margin-bottom: 30px;
+  margin-bottom: 35px;
 }
 
 .text.col {
@@ -88,8 +91,6 @@ input {
 .enter-btn {
   margin-left: 10px;
   border: none;
-  background: url("../images/doubleleft.svg") no-repeat;
-  background-size: cover;
   background-color: black;
   width: 25px;
   height: 25px;
