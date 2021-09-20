@@ -8,6 +8,8 @@
     </div>
     <!-- End logo section -->
 
+    <div class="middle row"></div>
+
     <!-- Bottom section -->
     <div class="bottom row">
       <!-- Text section -->
@@ -59,20 +61,28 @@ body {
   bottom: 0;
   left: 0;
   right: 0;
+  display: flex;
+  flex-direction: column;
 }
 
 .logo.row {
-  position: absolute;
   top: 15%;
   width: 100%;
   text-align: center;
 }
 
-.bottom.row {
-  position: absolute;
-  top: auto;
-  bottom: 10%;
+.middle.row {
+  margin: auto;
   width: 100%;
+  text-align: center;
+  height: 40%;
+  min-height: 200px;
+}
+
+.bottom.row {
+  width: 100%;
+  height: 100px;
+  margin-bottom: 30px;
 }
 
 .text.col {
