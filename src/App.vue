@@ -3,9 +3,6 @@
 </template>
 
 <script>
-let step = 1;
-let phoneNumber = "";
-
 export default {
   name: "App",
   methods: {},
