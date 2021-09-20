@@ -1,99 +1,177 @@
 <template>
-  <div class="top-container">
-    <img class="logo" src="../images/grabeasy.png" alt="logo" />
-    <div class="fs-3 intro">
-      Hey there, Let's get started.
-      <p>Enter your mobile number</p>
+  <div class="view container-fluid">
+    <!-- Logo section -->
+    <div class="logo row">
+      <div class="col">
+        <img src="../images/grabeasy.png" alt="logo" />
+      </div>
+    </div>
+    <!-- End logo section -->
+
+    <div class="middle row">
+      <div class="text row">
+        <div id="chat-screen" class="text col">
+          <p>Hey there, Let's get started.<br />Enter your mobile number</p>
+        </div>
+      </div>
     </div>
 
-    <div class="bottom-container">
-      <div class="phone-box">
-        <span>+1</span
-        ><input
-          class="tel-input"
-          type="tel"
-          placeholder="Enter your mobile number"
-        />
+    <!-- Bottom section -->
+    <div class="bottom row">
+      <!-- Input section -->
+      <div class="input row">
+        <div class="input col">
+          <div class="input-box">
+            <span id="area-code">
+              +1
+            </span>
+            <input id="input-content" type="tel" />
+          </div>
+          <button
+            class="enter-btn"
+            v-on:click="addChat()"
+            v-on:keydown.enter="addChat()"
+          >
+            <img src="../images/doubleleft.svg" />
+          </button>
+        </div>
       </div>
-      <a href="/"
-        ><img class="enter-btn" src="../images/doubleleft.svg" alt="enter-btn"
-      /></a>
+      <!-- End input section -->
     </div>
+    <!-- End bottom section -->
   </div>
 </template>
 
 <script>
+let step = 1;
+let phoneNumber = "";
 export default {
   name: "Login",
+  methods: {
+    addChat: function() {
+      if (step === 1) {
+        phoneNumber = document.querySelector("#input-content").value;
+        console.log(phoneNumber.length);
+        if (phoneNumber.length >= 10) {
+          this.printUserChat();
+          this.printBotChat("Enter the received OTP on +1" + phoneNumber);
+          step++;
+        } else {
+          this.printBotChat("Please enter your phone number again!");
+        }
+      } else if (step === 2) {
+        this.printUserChat();
+        this.printBotChat("We are working on this!!!");
+        step++;
+      } else if (step === 3) {
+        this.printUserChat();
+        this.printBotChat("We are working on this!!!");
+      }
+    },
+    printUserChat: function() {
+      let userChat = document.querySelector("#input-content").value;
+      document.querySelector("#chat-screen").innerHTML +=
+        "<p style='padding-left: 150px; color: yellow'>" + userChat + "</p>";
+      document.querySelector("#input-content").value = "";
+    },
+    printBotChat: function(content) {
+      document.querySelector("#chat-screen").innerHTML +=
+        "<p>" + content + "</p>";
+    },
+  },
 };
 </script>
 
 <style scoped>
-.top-container {
-  height: 100%;
+.view {
+  box-sizing: border-box;
   position: fixed;
+  height: 100%;
+  width: 100%;
+  min-width: 320px;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
-  background-color: black;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
   font-family: "Roboto", sans-serif;
   color: white;
-}
-
-.logo {
-  height: fit-content;
-  width: fit-content;
-}
-
-.intro {
-  margin-top: 30vh;
-  margin-bottom: 5px;
-  text-align: left;
-  width: 310px;
-}
-
-.bottom-container {
-  display: flex;
-  width: 310px;
+  margin: 0;
+  background-color: black;
+  position: fixed;
   height: 100%;
-  justify-content: flex-start;
-  bottom: 0ch;
-  margin-bottom: 0;
+  width: 100%;
 }
 
-.phone-box {
+.logo.row {
+  top: 15%;
+  width: 100%;
+  text-align: center;
+}
+
+.middle.row {
+  display: flex;
+  flex-direction: column-reverse;
+  margin: auto;
+  width: 100%;
+  height: 100%;
+  min-height: 200px;
+  overflow: scroll;
+}
+
+.bottom.row {
+  width: 100%;
+  height: fit-content;
+  margin-bottom: 35px;
+}
+
+.text.col {
+  width: 500px;
+  margin-left: calc(50% - 125px);
+}
+
+.input.col {
+  display: flex;
+  flex-direction: row;
+  width: 500px;
+  margin-left: calc(50% - 125px);
+}
+
+.area-code {
+  color: white;
+  width: 70px;
+  border: none;
+  background-color: black;
+  opacity: 0.3;
+}
+
+.input-box {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: flex-start;
+  border: 1px solid white;
+  border-radius: 14px;
+  width: 200px;
   padding-left: 10px;
-  height: 40px;
-  width: 80%;
-  border: 1px solid #ffffff;
-  border-radius: 24px;
-  opacity: 1;
+  height: fit-content;
 }
 
-.tel-input {
-  font-family: "Roboto", sans-serif;
-  font-size: 1rem;
-  color: white;
-  margin-left: 5px;
-  border: hidden;
-  width: 13rem;
+input {
+  border: none;
   background-color: black;
-  letter-spacing: 0.19px;
-  color: #ffffff;
-  opacity: 0.5;
+  color: white;
+  width: 100px;
+  margin-left: 10px;
+  width: 150px;
 }
 
 .enter-btn {
-  margin-top: 10px;
-  margin-left: 30px;
+  margin-left: 10px;
+  border: none;
+  background-color: black;
+  width: 25px;
+  height: 25px;
 }
 </style>
