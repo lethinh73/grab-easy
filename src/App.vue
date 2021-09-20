@@ -8,7 +8,9 @@
     </div>
     <!-- End logo section -->
 
-    <div class="middle row"></div>
+    <div class="middle row">
+      <h1>Information here</h1>
+    </div>
 
     <!-- Bottom section -->
     <div class="bottom row">
@@ -23,7 +25,12 @@
       <!-- Input section -->
       <div class="input row">
         <div class="input col">
-          <input type="tel" />
+          <div class="input-box">
+            <span id="area-code">
+              +1
+            </span>
+            <input type="tel" />
+          </div>
           <a href="/"
             ><img class="btn" src="./images/doubleleft.svg" alt="enter-btn"
           /></a>
@@ -47,7 +54,7 @@ export default {
 }
 
 body {
-  font-family: "Roboto";
+  font-family: "Roboto", sans-serif;
   color: white;
   margin: 0;
   background-color: black;
@@ -91,7 +98,37 @@ body {
 }
 
 .input.col {
+  display: flex;
+  flex-direction: row;
   width: 500px;
   margin-left: calc(50% - 125px);
+}
+
+.area-code {
+  color: white;
+  width: 70px;
+  border: none;
+  background-color: black;
+  opacity: 0.3;
+}
+
+.input-box {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  border: 1px solid white;
+  border-radius: 14px;
+  width: 200px;
+  padding-left: 10px;
+}
+
+input {
+  border: none;
+  background-color: black;
+  color: white;
+  width: 100px;
+  margin-left: 10px;
+  width: 150px;
 }
 </style>
