@@ -1,45 +1,5 @@
 <template>
-  <div class="view container-fluid">
-    <!-- Logo section -->
-    <div class="logo row">
-      <div class="col">
-        <img src="./images/grabeasy.png" alt="logo" />
-      </div>
-    </div>
-    <!-- End logo section -->
-
-    <div class="middle row">
-      <div class="text row">
-        <div id="chat-screen" class="text col">
-          <p>Hey there, Let's get started.<br />Enter your mobile number</p>
-        </div>
-      </div>
-    </div>
-
-    <!-- Bottom section -->
-    <div class="bottom row">
-      <!-- Input section -->
-      <div class="input row">
-        <div class="input col">
-          <div class="input-box">
-            <span id="area-code">
-              +1
-            </span>
-            <input id="input-content" type="tel" />
-          </div>
-          <button
-            class="enter-btn"
-            v-on:click="addChat()"
-            v-on:keydown.enter="addChat()"
-          >
-            <img src="./images/doubleleft.svg" />
-          </button>
-        </div>
-      </div>
-      <!-- End input section -->
-    </div>
-    <!-- End bottom section -->
-  </div>
+  <router-view />
 </template>
 
 <script>
@@ -83,7 +43,23 @@ export default {
   },
 };
 </script>
+<<<<<<< HEAD
 
 <style scoped>
 @import "./styles/App.css";
+=======
+<style>
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+}
+a.nav-link {
+  color: black;
+}
+input:focus {
+  outline: none;
+}
+>>>>>>> origin/dev_vi
 </style>
