@@ -13,7 +13,6 @@ export default {
   font-family: "Roboto", sans-serif;
 }
 
-html,
 body {
   min-width: 300px;
   min-height: 550px;
