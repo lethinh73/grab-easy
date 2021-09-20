@@ -3,7 +3,7 @@
     <!-- Logo section -->
     <div class="logo row">
       <div class="col">
-        <img src="../images/grabeasy.png" alt="logo" />
+        <img class="logo" src="../images/grabeasy.png" alt="logo" />
       </div>
     </div>
     <!-- End logo section -->
@@ -25,13 +25,15 @@
             <span id="area-code">
               +1
             </span>
-            <input id="input-content" type="tel" />
+            <form v-on:submit.prevent="addChat()">
+              <input
+                id="input-content"
+                type="text"
+                placeholder="Enter your phone number"
+              />
+            </form>
           </div>
-          <button
-            class="enter-btn"
-            v-on:click="addChat()"
-            v-on:keydown.enter="addChat()"
-          >
+          <button class="enter-btn" v-on:click="addChat()">
             <img src="../images/doubleleft.svg" />
           </button>
         </div>
@@ -45,6 +47,8 @@
 <script>
 let step = 1;
 let phoneNumber = "";
+let name = "";
+
 export default {
   name: "Login",
   methods: {
@@ -55,17 +59,34 @@ export default {
         if (phoneNumber.length >= 10) {
           this.printUserChat();
           this.printBotChat("Enter the received OTP on +1" + phoneNumber);
+          // this.updatePlaceHolder("Enter your OTP");
           step++;
         } else {
           this.printBotChat("Please enter your phone number again!");
         }
       } else if (step === 2) {
-        this.printUserChat();
-        this.printBotChat("We are working on this!!!");
-        step++;
+        let chatContent = document.querySelector("#input-content").value;
+        if (chatContent.length > 0) {
+          this.printUserChat();
+          this.printBotChat("Enter your name:");
+          // this.updatePlaceHolder("Enter your name");
+          step++;
+        } else {
+          this.printBotChat("You entered nothing!");
+        }
       } else if (step === 3) {
+        name = document.querySelector("#input-content").value;
+        if (name.length > 0) {
+          this.printUserChat();
+          this.printBotChat("How are you, " + name + "?");
+          // this.updatePlaceHolder("Enter anything!");
+          step++;
+        } else {
+          this.printBotChat("You entered nothing!");
+        }
+      } else {
         this.printUserChat();
-        this.printBotChat("We are working on this!!!");
+        this.printBotChat("Sorry, we are still working on this!");
       }
     },
     printUserChat: function() {
@@ -78,6 +99,9 @@ export default {
       document.querySelector("#chat-screen").innerHTML +=
         "<p>" + content + "</p>";
     },
+    updatePlaceHolder: function(content) {
+      document.querySelector("#input-content").value(content);
+    },
   },
 };
 </script>
@@ -88,7 +112,6 @@ export default {
   position: fixed;
   height: 100%;
   width: 100%;
-  min-width: 320px;
   top: 0;
   bottom: 0;
   left: 0;
@@ -96,6 +119,7 @@ export default {
   display: flex;
   flex-direction: column;
   font-family: "Roboto", sans-serif;
+  font-size: 16px;
   color: white;
   margin: 0;
   background-color: black;
@@ -108,6 +132,11 @@ export default {
   top: 15%;
   width: 100%;
   text-align: center;
+}
+
+.logo {
+  width: 300px;
+  height: auto;
 }
 
 .middle.row {
@@ -135,6 +164,7 @@ export default {
   display: flex;
   flex-direction: row;
   width: 500px;
+  height: fit-content;
   margin-left: calc(50% - 125px);
 }
 
@@ -153,18 +183,22 @@ export default {
   justify-content: flex-start;
   border: 1px solid white;
   border-radius: 14px;
-  width: 200px;
+  width: 250px;
   padding-left: 10px;
   height: fit-content;
 }
 
-input {
-  border: none;
+form {
+  width: 100%;
+}
+
+#input-content {
   background-color: black;
   color: white;
-  width: 100px;
+  border: none;
   margin-left: 10px;
-  width: 150px;
+  width: calc(100% - 25px);
+  height: 40px;
 }
 
 .enter-btn {
@@ -173,5 +207,23 @@ input {
   background-color: black;
   width: 25px;
   height: 25px;
+}
+
+@media (min-width: 768px) {
+  .logo {
+    width: 350px;
+  }
+}
+
+@media (min-width: 992px) {
+  .logo {
+    width: 400px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .logo {
+    width: 410px;
+  }
 }
 </style>
