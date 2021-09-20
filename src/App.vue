@@ -43,11 +43,6 @@ export default {
   },
 };
 </script>
-<<<<<<< HEAD
-
-<style scoped>
-@import "./styles/App.css";
-=======
 <style>
 * {
   box-sizing: border-box;
@@ -61,5 +56,4 @@ a.nav-link {
 input:focus {
   outline: none;
 }
->>>>>>> origin/dev_vi
 </style>
