@@ -15,7 +15,7 @@
     </p>
   </div>
   <div class=" container">
-    <div class=" scrolling-wrapper d-flex flex-nowrap over-flow-x-auto">
+    <div class=" scrolling-wrapper d-flex flex-nowrap ">
       <div
         class="card-wrapper col-3 mb-3 me-4"
         v-for="place in places"
@@ -100,8 +100,6 @@ img.main {
   font-size: 0.8rem;
 }
 .scrolling-wrapper {
-  display: flex;
-  flex-wrap: nowrap;
   overflow-x: auto;
   margin-bottom: 80px;
 }
