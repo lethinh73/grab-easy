@@ -22,7 +22,7 @@
     <div class="search">
         <div class="title">Select Location</div>
         <div class="myloc">Your Location</div>
-      <GmapAutocomplete @place_changed='setPlace' class="ipt"/>
+      <input class="ipt" placeholder="Please Enter A Location" />
       <button class="btn" @click='addMarker'>Confirm Location & Proceed</button>
     </div>
   </div>
@@ -120,10 +120,11 @@ export default {
   color: white;
   margin-top: 150px;
   border: 0;
+  border-radius: 0;
 }
 
 .ipt{
-  width: 320px; 
+  width: 333px; 
   height: 39px; 
   background: #FFFFFF 0% 0% no-repeat padding-box;
   border:0;
@@ -154,13 +155,17 @@ export default {
  bottom: 0;
  font: normal normal bold 12px/17px Open Sans;
  }
+
+ .map{
+     height: 30vh;
+ }
 }
 
 @media (max-width: 668px) and (min-width: 300px) {
  .btn {
  width: 100%;
  bottom: 0;
- font: normal normal bold 12px/17px Open Sans;
+ font: normal normal bold 14px/17px Open Sans;
  }
  .title{
     width:300px;
@@ -185,7 +190,7 @@ export default {
  width: 100%;
  height: 60px;
  bottom: 0;
- font: normal normal bold 18px/17px Open Sans;
+ font: normal normal bold 24px/17px Open Sans;
  }
 
   .title{
@@ -211,7 +216,9 @@ export default {
 @media (max-width: 1200px) and (min-width: 993px) {
  .btn {
  width: 640px;
- bottom: 70px;
+ height: 60px;
+ bottom: 40px;
+ border-radius: 10px;
  font: normal normal bold 18px/17px Open Sans;
  }
 
@@ -230,7 +237,7 @@ export default {
  .ipt{
    width: 700px;
    height: 70px;
-   margin-top: 80px;
+   margin-top: 90px;
    font-size: 30px;
  }
 }
