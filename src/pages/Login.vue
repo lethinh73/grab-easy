@@ -15,14 +15,13 @@
         </div>
       </div>
     </div>
-
     <!-- Bottom section -->
     <div class="bottom row">
       <!-- Input section -->
       <div class="input row">
         <div class="input col">
           <div class="input-box">
-            <span>
+            <span id="area-code-container">
               <select id="area-code">
                 <option v-for="(code, short) in areaCodes" v-bind:key="code">
                   +{{ code }} ({{ countryCodes[short] }})</option
@@ -67,6 +66,7 @@ export default {
         if (phoneNumber.length >= 10) {
           this.printUserChat();
           this.printBotChat("Enter the received OTP on +1" + phoneNumber);
+          document.querySelector("#area-code-container").remove();
           step++;
         } else {
           this.printBotChat("Please enter your phone number again!");
@@ -90,6 +90,7 @@ export default {
           this.printBotChat("You entered nothing!");
         }
       } else {
+        step = 1;
         this.$router.push("/venue");
       }
     },
