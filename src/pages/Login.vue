@@ -84,14 +84,12 @@ export default {
         name = document.querySelector("#input-content").value;
         if (name.length > 0) {
           this.printUserChat();
-          this.printBotChat("How are you, " + name + "?");
+          this.printBotChat("Hi, " + name + "! Press Enter to proceed");
           step++;
         } else {
           this.printBotChat("You entered nothing!");
         }
       } else {
-        this.printUserChat();
-        this.printBotChat("Sorry, we are still working on this!");
         this.$router.push("/venue");
       }
     },
