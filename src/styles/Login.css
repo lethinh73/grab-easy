@@ -65,12 +65,12 @@
   margin-left: calc(50% - 125px);
 }
 
-.area-code {
+#area-code {
   color: white;
-  width: 70px;
+  width: 50px;
   border: none;
   background-color: black;
-  opacity: 0.3;
+  opacity: 0.5;
 }
 
 .input-box {
@@ -80,7 +80,7 @@
   justify-content: flex-start;
   border: 1px solid white;
   border-radius: 14px;
-  width: 250px;
+  width: 265px;
   padding-left: 10px;
   height: fit-content;
 }
@@ -93,8 +93,8 @@ form {
   background-color: black;
   color: white;
   border: none;
-  margin-left: 10px;
-  width: calc(100% - 20px);
+  margin-left: 5px;
+  width: calc(100% - 15px);
   height: 40px;
 }
 

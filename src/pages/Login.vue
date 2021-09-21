@@ -12,9 +12,6 @@
       <div class="text row">
         <div id="chat-screen" class="text col">
           <p>Hey there, Let's get started.<br />Enter your mobile number</p>
-          <div v-for="(code, country) in theData" v-bind:key="country">
-            {{ country }} : {{ code }}
-          </div>
         </div>
       </div>
     </div>
@@ -25,8 +22,12 @@
       <div class="input row">
         <div class="input col">
           <div class="input-box">
-            <span id="area-code">
-              +1
+            <span>
+              <select id="area-code">
+                <option v-for="(code, short) in areaCodes" v-bind:key="code">
+                  +{{ code }} ({{ countryCodes[short] }})</option
+                >
+              </select>
             </span>
             <form v-on:submit.prevent="addChat()">
               <input
@@ -49,6 +50,7 @@
 
 <script>
 import areaCodes from "../components/areaCodes.json";
+import countryCodes from "../components/countryCodes.json";
 let step = 1;
 let phoneNumber = "";
 let name = "";
@@ -56,7 +58,7 @@ let name = "";
 export default {
   name: "Login",
   data: function() {
-    return { theData: areaCodes };
+    return { areaCodes, countryCodes };
   },
   methods: {
     addChat: function() {
