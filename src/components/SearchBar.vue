@@ -32,13 +32,13 @@ img.next {
 }
 @media (min-width: 768px) {
   form {
-    width: 230px;
-    padding: 20px 0;
+    padding: 10px 0;
   }
 }
 @media (min-width: 992px) {
   form {
-    width: 400px;
+    padding: 15px 0;
+    font-size: 1.2rem;
   }
 }
 </style>

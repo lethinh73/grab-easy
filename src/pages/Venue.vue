@@ -1,6 +1,6 @@
 <template>
-  <SearchBar />
-  <div class="d-flex justify-content-center container mt-2">
+  <SearchBar class="fixed-top" />
+  <div class="d-flex justify-content-center container mt-5">
     <img class="main" src="../images/main-store/lg.png" />
   </div>
   <div class="cannot-find container">
@@ -14,9 +14,13 @@
       You can order using app at:
     </p>
   </div>
-  <div class="place container ">
-    <div class="row">
-      <div class="col-3 mb-3" v-for="place in places" :key="place.id">
+  <div class=" container">
+    <div class=" scrolling-wrapper d-flex flex-nowrap over-flow-x-auto">
+      <div
+        class="card-wrapper col-3 mb-3 me-4"
+        v-for="place in places"
+        :key="place.id"
+      >
         <img :src="require(`../images/place-name/${place.img}`)" />
         <p class="mt-2 mb-1">{{ place.name }}</p>
         <p class="area-name text-secondary">{{ place.area }}</p>
@@ -89,11 +93,20 @@ img.main {
 .order-at p {
   font-size: 1.1rem;
 }
-.place img {
+.scrolling-wrapper img {
   width: 100%;
 }
 .area-name {
   font-size: 0.8rem;
+}
+.scrolling-wrapper {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  margin-bottom: 80px;
+}
+.card-wrapper {
+  flex: 0 0 auto;
 }
 @media (min-width: 992px) {
   .place img {
