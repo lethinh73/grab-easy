@@ -1,3 +1,7 @@
+* {
+  font-size: 16px;
+}
+
 .view {
   box-sizing: border-box;
   position: fixed;
