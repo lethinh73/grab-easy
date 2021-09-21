@@ -5,20 +5,16 @@
 <script>
 export default {
   name: "App",
-  methods: {},
 };
 </script>
 <style>
 * {
   box-sizing: border-box;
-  margin: 0;
-  padding: 0;
   font-family: "Roboto", sans-serif;
 }
-a.nav-link {
-  color: black;
-}
-input:focus {
-  outline: none;
+
+body {
+  min-width: 300px;
+  min-height: 550px;
 }
 </style>

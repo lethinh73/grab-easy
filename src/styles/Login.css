@@ -1,9 +1,16 @@
-* {
+.view {
   box-sizing: border-box;
-}
-
-body {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
   font-family: "Roboto", sans-serif;
+  font-size: 16px;
   color: white;
   margin: 0;
   background-color: black;
@@ -12,23 +19,15 @@ body {
   width: 100%;
 }
 
-.view {
-  position: fixed;
-  height: 100%;
-  width: 100%;
-  min-width: 320px;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  display: flex;
-  flex-direction: column;
-}
-
 .logo.row {
   top: 15%;
   width: 100%;
   text-align: center;
+}
+
+.logo {
+  width: 300px;
+  height: auto;
 }
 
 .middle.row {
@@ -38,7 +37,13 @@ body {
   width: 100%;
   height: 100%;
   min-height: 200px;
-  overflow: scroll;
+  overflow: auto;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.middle.row::-webkit-scrollbar {
+  display: none;
 }
 
 .bottom.row {
@@ -56,15 +61,16 @@ body {
   display: flex;
   flex-direction: row;
   width: 500px;
+  height: fit-content;
   margin-left: calc(50% - 125px);
 }
 
-.area-code {
+#area-code {
   color: white;
-  width: 70px;
+  width: 50px;
   border: none;
   background-color: black;
-  opacity: 0.3;
+  opacity: 0.5;
 }
 
 .input-box {
@@ -74,24 +80,46 @@ body {
   justify-content: flex-start;
   border: 1px solid white;
   border-radius: 14px;
-  width: 200px;
+  width: 265px;
   padding-left: 10px;
   height: fit-content;
 }
 
-input {
-  border: none;
+form {
+  width: 100%;
+}
+
+#input-content {
   background-color: black;
   color: white;
-  width: 100px;
-  margin-left: 10px;
-  width: 150px;
+  border: none;
+  margin-left: 5px;
+  width: calc(100% - 15px);
+  height: 40px;
 }
 
 .enter-btn {
   margin-left: 10px;
   border: none;
   background-color: black;
-  width: 25px;
-  height: 25px;
+  width: 40px;
+  height: 40px;
+}
+
+@media (min-width: 768px) {
+  .logo {
+    width: 320px;
+  }
+}
+
+@media (min-width: 992px) {
+  .logo {
+    width: 340px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .logo {
+    width: 360px;
+  }
 }
