@@ -45,21 +45,25 @@
 </template>
 
 <script>
+// import axios from "axios";
 let step = 1;
 let phoneNumber = "";
 let name = "";
+let data = "";
 
 export default {
   name: "Login",
   methods: {
+    mounted() {},
     addChat: function() {
+      this.mounted();
+      console.log("data:" + data);
       if (step === 1) {
         phoneNumber = document.querySelector("#input-content").value;
         console.log(phoneNumber.length);
         if (phoneNumber.length >= 10) {
           this.printUserChat();
           this.printBotChat("Enter the received OTP on +1" + phoneNumber);
-          // this.updatePlaceHolder("Enter your OTP");
           step++;
         } else {
           this.printBotChat("Please enter your phone number again!");
@@ -69,7 +73,6 @@ export default {
         if (chatContent.length > 0) {
           this.printUserChat();
           this.printBotChat("Enter your name:");
-          // this.updatePlaceHolder("Enter your name");
           step++;
         } else {
           this.printBotChat("You entered nothing!");
@@ -79,7 +82,6 @@ export default {
         if (name.length > 0) {
           this.printUserChat();
           this.printBotChat("How are you, " + name + "?");
-          // this.updatePlaceHolder("Enter anything!");
           step++;
         } else {
           this.printBotChat("You entered nothing!");
@@ -87,6 +89,7 @@ export default {
       } else {
         this.printUserChat();
         this.printBotChat("Sorry, we are still working on this!");
+        this.$router.push("/venue");
       }
     },
     printUserChat: function() {

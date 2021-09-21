@@ -38,10 +38,12 @@
   height: 100%;
   min-height: 200px;
   overflow: auto;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 
 .middle.row::-webkit-scrollbar {
-  display: none; /* or add it to the track */
+  display: none;
 }
 
 .bottom.row {
