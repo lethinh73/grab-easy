@@ -1,6 +1,6 @@
 <template>
-  <Header />
-  <div class="d-flex justify-content-center container">
+  <SearchBar />
+  <div class="d-flex justify-content-center container mt-2">
     <img class="main" src="../images/main-store/lg.png" />
   </div>
   <div class="cannot-find container">
@@ -18,16 +18,18 @@
     <div class="row">
       <div class="col-3 mb-3" v-for="place in places" :key="place.id">
         <img :src="require(`../images/place-name/${place.img}`)" />
-        <p class="mt-3 mb-1">{{ place.name }}</p>
+        <p class="mt-2 mb-1">{{ place.name }}</p>
         <p class="area-name text-secondary">{{ place.area }}</p>
       </div>
     </div>
   </div>
+  <Navbar class="fixed-bottom" />
 </template>
 <script>
-import Header from "../components/Header.vue";
+import Navbar from "../components/Navbar.vue";
+import SearchBar from "../components/SearchBar.vue";
 export default {
-  components: { Header },
+  components: { Navbar, SearchBar },
   data() {
     return {
       places: [
