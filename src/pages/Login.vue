@@ -12,6 +12,9 @@
       <div class="text row">
         <div id="chat-screen" class="text col">
           <p>Hey there, Let's get started.<br />Enter your mobile number</p>
+          <div v-for="(code, country) in theData" v-bind:key="country">
+            {{ country }} : {{ code }}
+          </div>
         </div>
       </div>
     </div>
@@ -45,22 +48,20 @@
 </template>
 
 <script>
-// import axios from "axios";
+import areaCodes from "../components/areaCodes.json";
 let step = 1;
 let phoneNumber = "";
 let name = "";
-let data = "";
 
 export default {
   name: "Login",
+  data: function() {
+    return { theData: areaCodes };
+  },
   methods: {
-    mounted() {},
     addChat: function() {
-      this.mounted();
-      console.log("data:" + data);
       if (step === 1) {
         phoneNumber = document.querySelector("#input-content").value;
-        console.log(phoneNumber.length);
         if (phoneNumber.length >= 10) {
           this.printUserChat();
           this.printBotChat("Enter the received OTP on +1" + phoneNumber);
