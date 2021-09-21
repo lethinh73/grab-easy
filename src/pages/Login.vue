@@ -49,6 +49,7 @@
 </template>
 
 <script>
+//test heroku
 import areaCodes from "../components/areaCodes.json";
 import countryCodes from "../components/countryCodes.json";
 let step = 1;
