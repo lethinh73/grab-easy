@@ -11,10 +11,15 @@ export default {
 * {
   box-sizing: border-box;
   font-family: "Roboto", sans-serif;
+  font-size: 12px;
 }
 
 body {
   min-width: 300px;
   min-height: 550px;
+}
+a.nav-link {
+  color: black;
+  text-decoration: none;
 }
 </style>
