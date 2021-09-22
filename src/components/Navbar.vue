@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div>
     <ul class="nav">
       <li class="nav-item">
         <img src="../images/sydney-opera-house.svg" />
@@ -23,6 +23,7 @@
 <script></script>
 <style scoped>
 .nav {
+  background: #f5f5f5;
   justify-content: center;
   padding: 10px 0;
   font-size: 0.6rem;
@@ -38,11 +39,10 @@
 }
 @media (min-width: 768px) {
   .nav {
-    justify-content: flex-start;
     font-size: 0.9rem;
   }
   .nav-link {
-    padding: 0.5rem;
+    padding: 0.8rem;
   }
 }
 @media (min-width: 992px) {
@@ -52,7 +52,7 @@
 }
 @media (min-width: 1200px) {
   .nav {
-    padding: 30px;
+    padding: 20px 30px;
   }
 }
 </style>
