@@ -138,11 +138,6 @@ export default {
   text-align: center;
 }
 
-.logo {
-  width: 300px;
-  height: auto;
-}
-
 .middle.row {
   display: flex;
   flex-direction: column-reverse;
@@ -217,6 +212,11 @@ form {
   background-color: black;
   width: 40px;
   height: 40px;
+}
+
+.logo {
+  width: 40%;
+  height: auto;
 }
 
 @media (min-width: 768px) {

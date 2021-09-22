@@ -11,7 +11,11 @@
   <div class="container"></div>
 </template>
 <script></script>
-<style>
+<style scoped>
+a.nav-link {
+  color: black;
+  text-decoration: none;
+}
 .banner {
   background: #f3f2f2;
 }
