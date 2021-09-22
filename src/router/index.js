@@ -8,7 +8,7 @@ import Items from "../pages/Items.vue";
 const routes = [
   { path: "/", name: "Login", component: Login },
   { path: "/venue", name: "Venue", component: Venue },
-  { path: "/GoogleMap", name: "Map", component: GoogleMap }
+  { path: "/GoogleMap", name: "Map", component: GoogleMap },
   { path: "/items", name: "Items", component: Items },
 ];
 
