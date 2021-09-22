@@ -5,7 +5,6 @@
 <script>
 export default {
   name: "App",
-
 };
 </script>
 <style>
@@ -14,7 +13,7 @@ export default {
   font-size: 12px;
 }
 
-body{
+body {
   margin: 0;
 }
 </style>
