@@ -112,5 +112,9 @@ export default {
 </script>
 
 <style scoped>
+* {
+  border: 2px solid red;
+}
+
 @import url("../styles/Login.css");
 </style>
