@@ -5,10 +5,9 @@
 <script>
 export default {
   name: "App",
-
 };
 </script>
-<style scoped>
+<style>
 * {
   box-sizing: border-box;
   font-family: "Roboto", sans-serif;
@@ -16,8 +15,6 @@ export default {
 }
 
 body {
-  min-width: 300px;
-  min-height: 550px;
   margin: 0;
 }
 a.nav-link {
