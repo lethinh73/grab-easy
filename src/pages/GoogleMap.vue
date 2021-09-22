@@ -78,6 +78,7 @@ export default {
 *{
   box-sizing: border-box;
 }
+
 .search{
     display: flex;
     flex-direction: column;
@@ -98,7 +99,7 @@ export default {
 .title{
     width:333px;
     position: fixed;
-    bottom: 70px;
+    margin-bottom: 150px;
     font:normal normal bold 25px/22px Open Sans;
 }
 .myloc{
@@ -122,7 +123,7 @@ export default {
   color: white;
   margin-top: 150px;
   border: 0;
-  border-radius: 0;
+  border-radius: 5px;
 }
 
 .ipt{
@@ -141,7 +142,7 @@ export default {
   .title{
     width:250px;
     position: fixed;
-    margin-bottom: 130px;
+    margin-bottom: 140px;
     font:normal normal bold 25px/22px Open Sans;
  }
 
@@ -158,6 +159,7 @@ export default {
  width: 100%;
  bottom: 0;
  font: normal normal bold 12px/17px Open Sans;
+ border-radius: 0;
  }
 
  .map{
@@ -169,7 +171,8 @@ export default {
  .btn {
  width: 100%;
  bottom: 0;
- font: normal normal bold 14px/17px Open Sans;
+ font: normal normal bold 12px/17px Open Sans;
+ border-radius: 0;
  }
  .title{
     width:300px;
@@ -180,12 +183,13 @@ export default {
 
  .myloc{
    width: 300px;
-   margin-top: 30px;
+   margin-top: 50px;
  }
 
  .ipt{
-   margin-top: 30px;
+   margin-top: 50px;
    width: 300px;
+   font-size: 15px;
  }
 }
  
@@ -195,6 +199,7 @@ export default {
  height: 60px;
  bottom: 0;
  font: normal normal bold 24px/17px Open Sans;
+ border-radius: 0;
  }
 
   .title{
@@ -249,4 +254,5 @@ export default {
    font-size: 30px;
  }
 }
+
 </style>
