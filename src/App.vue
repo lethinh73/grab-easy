@@ -17,9 +17,4 @@ export default {
 body {
   margin: 0;
 }
-
-a.nav-link {
-  color: black;
-  text-decoration: none;
-}
 </style>
