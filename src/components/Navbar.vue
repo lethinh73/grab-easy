@@ -34,6 +34,9 @@
   flex-direction: column;
   justify-content: center;
 }
+.nav-link {
+  color: black;
+}
 .nav-item img {
   height: 20px;
 }

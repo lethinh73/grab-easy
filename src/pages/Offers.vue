@@ -3,12 +3,15 @@
     <div class="Offers">
       <h1 class="Offers">Offers</h1>
     </div>
-    <div class=" rowheight row justify-content-center d-flex align-items-center">
+    <div
+      class=" rowheight row justify-content-center d-flex align-items-center"
+    >
       <div class="logobox col-4 col-lg-2 text-center">
         <img class="logo" src="../images/Giftt@2x.png" alt="logo" />
-        <p class="wait">Please wait, good things take time</p></div>
+        <p class="wait">Please wait, good things take time</p>
       </div>
     </div>
+  </div>
   <Navbar class="fixed-bottom" />
 </template>
 <script scoped>
@@ -18,7 +21,6 @@ export default {
 };
 </script>
 <style scoped>
-
 .logo {
   width: 100%;
   height: 100%;
@@ -29,24 +31,25 @@ export default {
 }
 .wait {
   font-family: "roboto";
-  font-size: 16px ;
-  
+  font-size: 16px;
 }
 
 .Offers {
   margin-top: 10vh;
   top: 16px;
-left: 30px;
-width: 83px;
-height: 39px;
-text-align: left;
-font: normal normal bold 30px/36px Roboto;
-letter-spacing: -0.3px;
-color: #1A1824;
-opacity: 1;
+  left: 30px;
+  width: 83px;
+  height: 39px;
+  text-align: left;
+  font: normal normal bold 30px/36px Roboto;
+  letter-spacing: -0.3px;
+  color: #1a1824;
+  opacity: 1;
 }
 
-.rowheight{height:100%;}
+.rowheight {
+  height: 100%;
+}
 @media (min-width: 300px) {
   .Offers {
     margin-top: 5%;
