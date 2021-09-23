@@ -9,12 +9,18 @@ export default {
 </script>
 <style>
 * {
-  box-sizing: border-box;
   font-family: "Roboto", sans-serif;
   font-size: 12px;
+  margin: 0;
+  padding: 0;
 }
 
 body {
   margin: 0;
 }
+
+input {
+  border: none;
+}
+
 </style>

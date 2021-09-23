@@ -20,8 +20,8 @@
   </GMapMap>
 
     <div class="search">
-        <div class="title">Select Location</div>
-        <div class="myloc">Your Location</div>
+        <div  class="title">Select Location</div>
+        <div  class="myloc">Your Location</div>
       <input class="ipt" placeholder="Please Enter A Location" />
       <button class="btn" @click='addMarker'>Confirm Location & Proceed</button>
     </div>
@@ -75,13 +75,16 @@ export default {
 </script>
 
 <style scoped>
+*{
+  box-sizing: border-box;
+}
 
 .search{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 30vh;
+    height: 250px;
     width: 100%;
     background: #FFFFFF 0% 0% no-repeat padding-box;
     box-shadow: 0px 0px 5px #00000029;
@@ -96,7 +99,7 @@ export default {
 .title{
     width:333px;
     position: fixed;
-    margin-bottom: 130px;
+    margin-bottom: 150px;
     font:normal normal bold 25px/22px Open Sans;
 }
 .myloc{
@@ -120,7 +123,7 @@ export default {
   color: white;
   margin-top: 150px;
   border: 0;
-  border-radius: 0;
+  border-radius: 5px;
 }
 
 .ipt{
@@ -133,11 +136,13 @@ export default {
   margin-top: 50px;
 }
 
+
+
 @media (max-width: 299px){
   .title{
     width:250px;
     position: fixed;
-    margin-bottom: 130px;
+    margin-bottom: 140px;
     font:normal normal bold 25px/22px Open Sans;
  }
 
@@ -154,6 +159,7 @@ export default {
  width: 100%;
  bottom: 0;
  font: normal normal bold 12px/17px Open Sans;
+ border-radius: 0;
  }
 
  .map{
@@ -165,7 +171,8 @@ export default {
  .btn {
  width: 100%;
  bottom: 0;
- font: normal normal bold 14px/17px Open Sans;
+ font: normal normal bold 12px/17px Open Sans;
+ border-radius: 0;
  }
  .title{
     width:300px;
@@ -176,12 +183,13 @@ export default {
 
  .myloc{
    width: 300px;
-   margin-top: 30px;
+   margin-top: 50px;
  }
 
  .ipt{
-   margin-top: 30px;
+   margin-top: 50px;
    width: 300px;
+   font-size: 15px;
  }
 }
  
@@ -191,12 +199,13 @@ export default {
  height: 60px;
  bottom: 0;
  font: normal normal bold 24px/17px Open Sans;
+ border-radius: 0;
  }
 
   .title{
     width:600px;
     position: fixed;
-    margin-bottom: 160px;
+    margin-bottom: 140px;
     font:normal normal bold 40px/22px Open Sans;
  }
 
@@ -217,28 +226,33 @@ export default {
  .btn {
  width: 640px;
  height: 60px;
- bottom: 40px;
+ bottom: 10px;
  border-radius: 10px;
  font: normal normal bold 18px/17px Open Sans;
  }
 
+.search{
+  height: 300px;
+}
   .title{
     width:700px;
     position: fixed;
-    margin-bottom: 180px;
-    font:normal normal bold 50px/22px Open Sans;
+    margin-bottom: 170px;
+    font:normal normal bold 40px/22px Open Sans;
  }
 
  .myloc{
    width: 700px;
-   font: normal normal 600 30px/17px Open Sans;
+   font: normal normal 600 25px/17px Open Sans;
+   margin-bottom: 95px;
  }
 
  .ipt{
    width: 700px;
    height: 70px;
-   margin-top: 90px;
+   margin-top: 70px;
    font-size: 30px;
  }
 }
+
 </style>
