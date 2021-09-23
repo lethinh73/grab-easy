@@ -70,11 +70,7 @@ export default {
   components: { Item },
 };
 </script>
-<style>
-* {
-  border: 1px red solid;
-}
-
+<style scoped>
 form {
   background: #f3f2f2;
   width: 100%;
