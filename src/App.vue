@@ -9,16 +9,11 @@ export default {
 </script>
 <style>
 * {
-  box-sizing: border-box;
   font-family: "Roboto", sans-serif;
   font-size: 12px;
 }
 
 body {
   margin: 0;
-}
-a.nav-link {
-  color: black;
-  text-decoration: none;
 }
 </style>
