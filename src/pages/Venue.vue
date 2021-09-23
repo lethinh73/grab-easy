@@ -79,6 +79,11 @@ export default {
 };
 </script>
 <style scoped>
+a.nav-link {
+  color: black;
+  text-decoration: none;
+}
+
 div {
   background: white;
 }

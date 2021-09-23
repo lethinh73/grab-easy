@@ -18,7 +18,9 @@ export default {
 body {
   margin: 0;
 }
+
 input {
   border: none;
 }
+
 </style>
