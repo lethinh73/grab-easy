@@ -1,19 +1,93 @@
 <template>
-  <div class="header-img">
-    <img src="../images/items-main/2x.png" />
+  <div class="header-img w-100">
+    <img class="img-fluid w-100 " src="../images/items-main/2x.png" />
   </div>
-  <form class="banner container">
+  <form class="items-form py-3 px-4">
     <input placeholder="Category Name" />
-    <button>
-      <img src="../images/items-search.svg" />
-    </button>
+    <img src="../images/items-search.svg" />
   </form>
-  <div class="container"></div>
+  <div class="row mt-3 w-100">
+    <div
+      v-for="item in items"
+      :key="item.id"
+      class="col-6 p-2 d-flex justify-content-center"
+    >
+      <Item :item="item" />
+    </div>
+  </div>
 </template>
-<script></script>
-<style>
-.banner {
+<script>
+import Item from "../components/Item.vue";
+export default {
+  data() {
+    return {
+      items: [
+        {
+          id: 1,
+          name: "Item name",
+          price: 562,
+          image: "cream-stone-icecream1.png",
+          customizable: true,
+        },
+        {
+          id: 2,
+          name: "Item name",
+          price: 562,
+          image: "cream-stone-icecream2.png",
+          customizable: false,
+        },
+        {
+          id: 3,
+          name: "Item name",
+          price: 562,
+          image: "cream-stone-icecream3.png",
+          customizable: true,
+        },
+        {
+          id: 4,
+          name: "Item name",
+          price: 562,
+          image: "cream-stone-icecream4.png",
+          customizable: false,
+        },
+        {
+          id: 5,
+          name: "Item name",
+          price: 562,
+          image: "cream-stone-icecream5.png",
+          customizable: false,
+        },
+        {
+          id: 6,
+          name: "Item name",
+          price: 562,
+          image: "cream-stone-icecream6.png",
+          customizable: true,
+        },
+      ],
+    };
+  },
+  components: { Item },
+};
+</script>
+<style scoped>
+form {
   background: #f3f2f2;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+form img {
+  position: absolute;
+  top: 0.5rem;
+  right: 1rem;
+}
+form input {
+  background: #f3f2f2;
+}
+::placeholder {
+  color: black;
 }
 @media (min-width: 768px) {
 }

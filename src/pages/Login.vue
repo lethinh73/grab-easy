@@ -15,14 +15,13 @@
         </div>
       </div>
     </div>
-
     <!-- Bottom section -->
     <div class="bottom row">
       <!-- Input section -->
       <div class="input row">
         <div class="input col">
           <div class="input-box">
-            <span>
+            <span id="area-code-container">
               <select id="area-code">
                 <option v-for="(code, short) in areaCodes" v-bind:key="code">
                   +{{ code }} ({{ countryCodes[short] }})</option
@@ -68,6 +67,7 @@ export default {
         if (phoneNumber.length >= 10) {
           this.printUserChat();
           this.printBotChat("Enter the received OTP on +1" + phoneNumber);
+          document.querySelector("#area-code-container").remove();
           step++;
         } else {
           this.printBotChat("Please enter your phone number again!");
@@ -91,6 +91,7 @@ export default {
           this.printBotChat("You entered nothing!");
         }
       } else {
+        step = 1;
         this.$router.push("/venue");
       }
     },
@@ -112,5 +113,127 @@ export default {
 </script>
 
 <style scoped>
-@import url("../styles/Login.css");
+.view {
+  box-sizing: border-box;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  color: white;
+  margin: 0;
+  background-color: black;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+}
+
+.logo.row {
+  top: 15%;
+  width: 100%;
+  text-align: center;
+}
+
+.middle.row {
+  display: flex;
+  flex-direction: column-reverse;
+  margin: auto;
+  width: 100%;
+  height: 100%;
+  min-height: 200px;
+  overflow: auto;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.middle.row::-webkit-scrollbar {
+  display: none;
+}
+
+.bottom.row {
+  width: 100%;
+  height: fit-content;
+  margin-bottom: 35px;
+}
+
+.text.col {
+  width: 500px;
+  margin-left: calc(50% - 125px);
+}
+
+.input.col {
+  display: flex;
+  flex-direction: row;
+  width: 500px;
+  height: fit-content;
+  margin-left: calc(50% - 125px);
+}
+
+#area-code {
+  color: white;
+  width: 50px;
+  border: none;
+  background-color: black;
+  opacity: 0.5;
+}
+
+.input-box {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  border: 1px solid white;
+  border-radius: 14px;
+  width: 265px;
+  padding-left: 10px;
+  height: fit-content;
+}
+
+form {
+  width: 100%;
+}
+
+#input-content {
+  background-color: black;
+  color: white;
+  border: none;
+  margin-left: 5px;
+  width: calc(100% - 15px);
+  height: 40px;
+}
+
+.enter-btn {
+  margin-left: 10px;
+  border: none;
+  background-color: black;
+  width: 40px;
+  height: 40px;
+}
+
+.logo {
+  width: 40%;
+  height: auto;
+}
+
+@media (min-width: 768px) {
+  .logo {
+    width: 320px;
+  }
+}
+
+@media (min-width: 992px) {
+  .logo {
+    width: 340px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .logo {
+    width: 360px;
+  }
+}
 </style>

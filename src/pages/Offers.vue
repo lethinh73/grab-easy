@@ -11,7 +11,7 @@
     </div>
   <Navbar class="fixed-bottom" />
 </template>
-<script>
+<script scoped>
 import Navbar from "../components/Navbar.vue";
 export default {
   components: { Navbar },

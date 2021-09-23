@@ -5,23 +5,25 @@
 <script>
 export default {
   name: "App",
-
 };
 </script>
+<<<<<<< HEAD
 <style >
+=======
+<style>
+>>>>>>> main
 * {
-  box-sizing: border-box;
   font-family: "Roboto", sans-serif;
   font-size: 12px;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-  min-width: 300px;
-  min-height: 550px;
   margin: 0;
 }
-a.nav-link {
-  color: black;
-  text-decoration: none;
+
+input {
+  border: none;
 }
 </style>
