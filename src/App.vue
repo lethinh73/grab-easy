@@ -12,6 +12,8 @@ export default {
   box-sizing: border-box;
   font-family: "Roboto", sans-serif;
   font-size: 12px;
+  margin: 0;
+  padding: 0;
 }
 
 body {
@@ -21,5 +23,8 @@ body {
 a.nav-link {
   color: black;
   text-decoration: none;
+}
+input {
+  border: none;
 }
 </style>
