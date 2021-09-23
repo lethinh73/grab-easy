@@ -7,11 +7,7 @@ export default {
   name: "App",
 };
 </script>
-<<<<<<< HEAD
-<style >
-=======
 <style>
->>>>>>> main
 * {
   font-family: "Roboto", sans-serif;
   font-size: 12px;
