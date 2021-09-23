@@ -1,123 +1,80 @@
 <template>
-  <SearchBar class="fixed-top" />
-  <div class="d-flex justify-content-center container mt-5">
-    <img class="main" src="../images/main-store/lg.png" />
-  </div>
-  <div class="cannot-find container">
-    <p class="text-center rounded-pill my-3">
-      Cannot find any Creamston outlet near you, we are available at the below
-      locations.
-    </p>
-  </div>
-  <div class="order-at container">
-    <p class="fw-bold my-3">
-      You can order using app at:
-    </p>
-  </div>
-  <div class=" container">
-    <div class=" scrolling-wrapper d-flex flex-nowrap ">
-      <div
-        class="card-wrapper col-3 mb-3 me-4"
-        v-for="place in places"
-        :key="place.id"
-      >
-        <img :src="require(`../images/place-name/${place.img}`)" />
-        <p class="mt-2 mb-1">{{ place.name }}</p>
-        <p class="area-name text-secondary">{{ place.area }}</p>
+  <div class="rowheight container">
+    <div class="Offers">
+      <h1 class="Offers">Offers</h1>
+    </div>
+    <div class=" rowheight row justify-content-center d-flex align-items-center">
+      <div class="logobox col-4 col-lg-2 text-center">
+        <img class="logo" src="../images/Giftt@2x.png" alt="logo" />
+        <p class="wait">Please wait, good things take time</p></div>
       </div>
     </div>
-  </div>
   <Navbar class="fixed-bottom" />
 </template>
 <script scoped>
 import Navbar from "../components/Navbar.vue";
-import SearchBar from "../components/SearchBar.vue";
 export default {
-  components: { Navbar, SearchBar },
-  data() {
-    return {
-      places: [
-        {
-          id: 1,
-          name: "Place Name",
-          area: "Area Name",
-          img: "@2x.png",
-        },
-        {
-          id: 2,
-          name: "Place Name",
-          area: "Area Name",
-          img: "@2x.png",
-        },
-        {
-          id: 3,
-          name: "Place Name",
-          area: "Area Name",
-          img: "@2x.png",
-        },
-        {
-          id: 4,
-          name: "Place Name",
-          area: "Area Name",
-          img: "@2x.png",
-        },
-        {
-          id: 5,
-          name: "Place Name",
-          area: "Area Name",
-          img: "@2x.png",
-        },
-        {
-          id: 6,
-          name: "Place Name",
-          area: "Area Name",
-          img: "@2x.png",
-        },
-      ],
-    };
-  },
+  components: { Navbar },
 };
 </script>
 <style scoped>
-div {
-  background: white;
-}
-img.main {
+
+.logo {
   width: 100%;
-  object-fit: contain;
+  height: 100%;
 }
-.cannot-find p {
-  background: #f5f5f5;
-  padding: 13px 35px;
+.logobox {
+  margin-top: 10%;
+  width: fit-content;
 }
-.order-at p {
-  font-size: 1.1rem;
+.wait {
+  font-family: "roboto";
+  font-size: 16px ;
+  
 }
-.scrolling-wrapper img {
-  width: 100%;
+
+.Offers {
+  margin-top: 10vh;
+  top: 16px;
+left: 30px;
+width: 83px;
+height: 39px;
+text-align: left;
+font: normal normal bold 30px/36px Roboto;
+letter-spacing: -0.3px;
+color: #1A1824;
+opacity: 1;
 }
-.area-name {
-  font-size: 0.8rem;
+
+.rowheight{height:100%;}
+@media (min-width: 300px) {
+  .Offers {
+    margin-top: 5%;
+  }
 }
-.scrolling-wrapper {
-  overflow-x: auto;
-  margin-bottom: 80px;
+@media (min-width: 300px) {
+  .logo {
+    width: 130px;
+    height: fit-content;
+  }
 }
-.card-wrapper {
-  flex: 0 0 auto;
+@media (min-width: 702px) {
+  .logo {
+    width: 160px;
+    height: fit-content;
+  }
 }
 @media (min-width: 992px) {
-  .place img {
-    width: 80%;
+  .logo {
+    width: 160px;
+    height: fit-content;
   }
 }
+
 @media (min-width: 1200px) {
-  .cannot-find p {
-    padding: 20px 50px;
-    font-size: 1.1rem;
-  }
-  .order-at p {
-    font-size: 1.2rem;
+  .logo {
+    width: 160px;
+    height: fit-content;
   }
 }
 </style>
