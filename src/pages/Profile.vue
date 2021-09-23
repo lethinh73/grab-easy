@@ -1,7 +1,7 @@
 <template>
   <div class="profile-con">
     <div class="greeting" style="margin-top: 30px;">
-      Hello, Thinh <fontawesome icon={["fal", "coffee"]} />
+      Hello, Thinh
     </div>
     <Navbar class="nav" />
   </div>
@@ -9,11 +9,10 @@
 
 <script>
 import Navbar from "../components/Navbar.vue";
-import * as fontawesome from "@fortawesome/fontawesome-free";
 
 export default {
   name: "Profile",
-  components: { Navbar, fontawesome },
+  components: { Navbar },
 };
 </script>
 

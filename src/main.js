@@ -1,7 +1,6 @@
 import { createApp } from "vue";
 import App from "./App.vue";
 import router from "./router";
-// import Vue from 'vue';
 import VueGoogleMaps from "@fawmi/vue-google-maps";
 
 // Vue.config.productionTip = false
