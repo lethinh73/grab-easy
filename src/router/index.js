@@ -14,7 +14,7 @@ const routes = [
   { path: "/GoogleMap", name: "Map", component: GoogleMap },
   { path: "/items", name: "Items", component: Items },
   { path: "/offers", name: "Offers", component: Offers },
-  { path: "/orderSuccess", name: "orderSuccess", component: orderSuccess }
+  { path: "/orderSuccess", name: "orderSuccess", component: orderSuccess },
   { path: "/profile", name: "Profile", component: Profile },
   { path: "/offers2", name: "Offers2", component: Offers2 },
 ];
