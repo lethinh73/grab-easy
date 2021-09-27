@@ -1,10 +1,10 @@
 <template>
   <div class="profile-container">
     <div class="top">
-      <button class="btn left-arrow">
+      <button class="btn left-arrow" v-on:click="goBack()">
         <i class="fas fa-arrow-left"></i>
       </button>
-      <div class="greeting">Hello, User!</div>
+      <div class="greeting">Hello, {{ 1 + 2 }}!</div>
     </div>
 
     <div class="middle">
@@ -38,6 +38,11 @@ import Navbar from "../components/Navbar.vue";
 export default {
   name: "Profile",
   components: { Navbar },
+  methods: {
+    goBack: function() {
+      window.history.back();
+    },
+  },
 };
 </script>
 
