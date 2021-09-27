@@ -23,11 +23,11 @@ export default {
 <style scoped>
 .logo {
   width: 100%;
-  height: 100%;
+  height: auto;
 }
 .logobox {
   margin-top: 10%;
-  width: fit-content;
+  width: auto;
 }
 .wait {
   font-family: "roboto";
@@ -58,26 +58,26 @@ export default {
 @media (min-width: 300px) {
   .logo {
     width: 130px;
-    height: fit-content;
+    height: auto;
   }
 }
 @media (min-width: 702px) {
   .logo {
     width: 160px;
-    height: fit-content;
+    height: auto;
   }
 }
 @media (min-width: 992px) {
   .logo {
     width: 160px;
-    height: fit-content;
+    height: auto;
   }
 }
 
 @media (min-width: 1200px) {
   .logo {
     width: 160px;
-    height: fit-content;
+    height: auto;
   }
 }
 </style>

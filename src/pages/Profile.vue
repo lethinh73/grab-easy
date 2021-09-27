@@ -1,6 +1,6 @@
 <template>
-  <div class="profile-container">
-    <div class="greeting" style="margin-top: 30px;">
+  <div class="profile-container" style="background-color: green">
+    <div class="greeting">
       Hello, Thinh
     </div>
     <Navbar class="nav" />
@@ -17,7 +17,8 @@ export default {
 </script>
 
 <style scoped>
-.profile-container {
+body {
+  position: relative;
   width: 100%;
   height: 100vh;
   top: 0;
@@ -25,6 +26,13 @@ export default {
   left: 0;
   right: 0;
   margin: 0;
+  padding: 0;
+}
+
+.profile-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
 }
 
 .nav {
