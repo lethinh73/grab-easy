@@ -4,7 +4,7 @@
       <button class="btn left-arrow">
         <i class="fas fa-arrow-left"></i>
       </button>
-      <div class="greeting">Hello, Grab Easy!</div>
+      <div class="greeting">Hello, User!</div>
     </div>
 
     <div class="middle">
@@ -22,7 +22,15 @@
         /></a>
       </span>
     </div>
-    <Navbar class="nav" />
+
+    <div class="bottom fixed-bottom">
+      <p>Terms and Conditions</p>
+      <p>Privacy policy</p>
+      <p>Version 1.43</p>
+      <div style="width: 100%">
+        <Navbar />
+      </div>
+    </div>
   </div>
 </template>
 
@@ -41,7 +49,10 @@ export default {
 } */
 
 body {
-  position: relative;
+  display: flex;
+  flex-flow: column;
+  flex-wrap: nowrap;
+  position: fixed;
   width: 100%;
   height: 100vh;
   top: 0;
@@ -53,22 +64,22 @@ body {
 }
 
 .profile-container {
-  position: absolute;
   width: 100%;
   height: 100%;
 }
 
 .top {
-  margin: 50px auto auto 30px;
+  margin: 2% auto auto 30px;
   width: fit-content;
 }
 
 .left-arrow {
   padding-left: 0;
+  margin-bottom: 20px;
 }
 
 .fa-arrow-left {
-  font-size: 25px;
+  font-size: 30px;
 }
 
 .greeting {
@@ -76,7 +87,9 @@ body {
 }
 
 .middle {
-  margin: 50px auto auto 30px;
+  position: fixed;
+  bottom: calc(50% - 30px);
+  margin: auto auto auto 30px;
   display: flex;
   flex-direction: column;
   justify-content: left;
@@ -84,26 +97,30 @@ body {
 }
 
 .menu {
-  font-size: 25px;
+  font-size: 20px;
   text-align: left;
   padding-left: 0;
   width: fit-content;
-  margin: 10px auto 10px 0;
+  margin: 0 auto 10px 0;
 }
 
 .social-btn-group {
-  margin: 10px auto 10px 0;
+  margin: 20px auto 10px 0;
 }
 
 a img {
-  width: 50px;
-  height: 50px;
-  margin-right: 5px;
+  width: 30px;
+  height: 30px;
+  margin-right: 30px;
 }
 
-.nav {
-  position: fixed;
+.bottom {
+  position: absolute;
+  margin: auto auto 10px 0 !important;
   width: 100%;
-  bottom: 0;
+}
+
+.bottom p {
+  margin-left: 30px;
 }
 </style>
