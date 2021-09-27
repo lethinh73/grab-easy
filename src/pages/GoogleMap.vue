@@ -1,7 +1,7 @@
 <template>
   <div>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <GMapMap class="map"
+    <GMapMap class="map"
       :center="center"
       :zoom="7"
       map-type-id="terrain"
@@ -17,18 +17,19 @@
           @click="center=m.position"
       />
     </GMapCluster>
-  </GMapMap>
+    </GMapMap>
 
     <div class="search">
         <div  class="title">Select Location</div>
         <div  class="myloc">Your Location</div>
-      <input class="ipt" placeholder="Please Enter A Location" />
-      <button class="btn" @click='addMarker'>Confirm Location & Proceed</button>
+      <input class="ipt" placeholder="Please Enter A Location" v-on:submit.prevent="addChat()" />
+      <button class="btn" @click='addMarker' v-on:click="addChat()">Confirm Location & Proceed</button>
     </div>
   </div>
 </template>
 
 <script>
+let step = 1;
 export default {
   name: 'GoogleMap',
   data() {
@@ -47,6 +48,11 @@ export default {
     this.geolocate();
   },
   methods: {
+    addChat: function() {
+      if (step === 1) {
+        this.$router.push("/Venue");
+      }
+    },
     setPlace(place) {
       this.currentPlace = place;
     },
@@ -91,23 +97,22 @@ export default {
     border-radius: 12px 12px 0px 0px;
     opacity: 1;
     overflow:hidden;
-    position: fixed;
+    position: absolute;
     background-color: white;
     bottom: 0;
 }
 
 .title{
     width:333px;
-    position: fixed;
-    margin-bottom: 150px;
+    position: absolute;
+    bottom: 200px;
     font:normal normal bold 25px/22px Open Sans;
 }
 .myloc{
     width:333px;
     font: normal normal 600 15px/17px Open Sans;
-    position: fixed;
-    margin-bottom: 70px;
-    margin-top: 40px;
+    position: absolute;
+    bottom: 150px;
 }
 
 .map{
@@ -120,8 +125,8 @@ export default {
   box-shadow: 0px 0px 5px #00000029;
   opacity: 1;
   position: absolute;
+  bottom: 40px;
   color: white;
-  margin-top: 150px;
   border: 0;
   border-radius: 5px;
 }
@@ -133,7 +138,7 @@ export default {
   border:0;
   box-shadow: 0px 0px 5px #00000029;
   border-radius: 5px;
-  margin-top: 50px;
+  position: absolute;
 }
 
 
@@ -141,18 +146,18 @@ export default {
 @media (max-width: 299px){
   .title{
     width:250px;
-    position: fixed;
-    margin-bottom: 140px;
+    position: absolute;
+    bottom: 200px;
     font:normal normal bold 25px/22px Open Sans;
  }
 
  .myloc{
    width: 250px;
-   margin-top: 30px;
+   position: absolute;
  }
 
  .ipt{
-   margin-top: 30px;
+   position: absolute;
    width: 250px;
  }
  .btn {
@@ -176,20 +181,24 @@ export default {
  }
  .title{
     width:300px;
-    position: fixed;
-    margin-bottom: 130px;
+    position: absolute;
+    bottom: 200px;
     font:normal normal bold 25px/22px Open Sans;
  }
 
  .myloc{
    width: 300px;
    margin-top: 50px;
+   position: absolute;
+   bottom: 150px;
  }
 
  .ipt{
    margin-top: 50px;
    width: 300px;
    font-size: 15px;
+   position: absolute;
+   bottom: 107px;
  }
 }
  
@@ -204,21 +213,23 @@ export default {
 
   .title{
     width:600px;
-    position: fixed;
-    margin-bottom: 140px;
-    font:normal normal bold 40px/22px Open Sans;
+    position: absolute;
+    font:normal normal bold 35px/22px Open Sans;
  }
 
  .myloc{
    width:600px;
-   font: normal normal 600 25px/17px Open Sans;
-   margin-bottom: 90px;
+   font: normal normal 600 20px/17px Open Sans;
+   position: absolute;
+   bottom: 160px;
  }
 
  .ipt{
    width:600px;
    height: 60px;
    font-size: 30px;
+   position: absolute;
+   bottom: 80px;
  }
 }
  
@@ -236,22 +247,24 @@ export default {
 }
   .title{
     width:700px;
-    position: fixed;
-    margin-bottom: 170px;
+    position: absolute;
+    bottom: 240px;
     font:normal normal bold 40px/22px Open Sans;
  }
 
  .myloc{
    width: 700px;
    font: normal normal 600 25px/17px Open Sans;
-   margin-bottom: 95px;
+   position: absolute;
+   bottom: 190px;
  }
 
  .ipt{
    width: 700px;
    height: 70px;
-   margin-top: 70px;
    font-size: 30px;
+   position: absolute;
+   bottom: 100px;
  }
 }
 
