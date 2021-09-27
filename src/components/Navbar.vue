@@ -5,7 +5,7 @@
         <img src="../images/sydney-opera-house.svg" />
         <a class="nav-link" aria-current="page" href="#">HOME</a>
       </li>
-      <li class="nav-item" v-on:click="gotoPage('/offers')">
+      <li class="nav-item" v-on:click="gotoPage('/items')">
         <img src="../images/Glyph-Copy.svg" />
         <a class="nav-link" href="#">MY ORDERS</a>
       </li>
