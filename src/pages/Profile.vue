@@ -4,7 +4,7 @@
       <button class="btn left-arrow" v-on:click="goBack()">
         <i class="fas fa-arrow-left"></i>
       </button>
-      <div class="greeting">Hello, {{ 1 + 2 }}!</div>
+      <div class="greeting">Hello, User!</div>
     </div>
 
     <div class="middle">
