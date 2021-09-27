@@ -1,5 +1,5 @@
 <template>
-  <div class="profile-con">
+  <div class="profile-container">
     <div class="greeting" style="margin-top: 30px;">
       Hello, Thinh
     </div>
@@ -17,7 +17,7 @@ export default {
 </script>
 
 <style scoped>
-.profile-con {
+.profile-container {
   width: 100%;
   height: 100vh;
   top: 0;
