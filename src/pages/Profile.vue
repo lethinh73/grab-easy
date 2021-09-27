@@ -1,7 +1,7 @@
 <template>
   <div class="profile-container">
     <div class="top">
-      <button class="btn">
+      <button class="btn left-arrow">
         <i class="fas fa-arrow-left"></i>
       </button>
       <div class="greeting">Hello, Grab Easy!</div>
@@ -9,8 +9,18 @@
 
     <div class="middle">
       <button class="btn menu">Notifications</button>
-      <button class="btn menu">Address</button>
       <button class="btn menu">Log out</button>
+      <span class="social-btn-group">
+        <a href="http://www.facebook.com"
+          ><img src="../images/profile/facebook.svg" alt="facebook"
+        /></a>
+        <a href="http://www.facebook.com"
+          ><img src="../images/profile/instagram.svg" alt="facebook"
+        /></a>
+        <a href="http://www.facebook.com"
+          ><img src="../images/profile/globe.svg" alt="facebook"
+        /></a>
+      </span>
     </div>
     <Navbar class="nav" />
   </div>
@@ -26,6 +36,10 @@ export default {
 </script>
 
 <style scoped>
+/* * {
+  border: 1px solid black;
+} */
+
 body {
   position: relative;
   width: 100%;
@@ -42,12 +56,15 @@ body {
   position: absolute;
   width: 100%;
   height: 100%;
-  background-color: orange;
 }
 
 .top {
   margin: 50px auto auto 30px;
-  border: 1px black solid;
+  width: fit-content;
+}
+
+.left-arrow {
+  padding-left: 0;
 }
 
 .fa-arrow-left {
@@ -59,15 +76,29 @@ body {
 }
 
 .middle {
-  border: 1px solid black;
   margin: 50px auto auto 30px;
   display: flex;
   flex-direction: column;
   justify-content: left;
+  width: fit-content;
 }
 
 .menu {
-  border: 1px solid black;
+  font-size: 25px;
+  text-align: left;
+  padding-left: 0;
+  width: fit-content;
+  margin: 10px auto 10px 0;
+}
+
+.social-btn-group {
+  margin: 10px auto 10px 0;
+}
+
+a img {
+  width: 50px;
+  height: 50px;
+  margin-right: 5px;
 }
 
 .nav {
