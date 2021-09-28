@@ -1,14 +1,14 @@
 <template>
   <div class="rowheight container">
     <div class="Offers">
-      <h1 class="Offers">Offers</h1>
+      <h1 class="Offers">Notifications</h1>
     </div>
     <div
       class=" rowheight row justify-content-center d-flex align-items-center"
     >
-      <div class="logobox col-4 col-lg-2 text-center">
-        <img class="logo" src="../images/Giftt@2x.png" alt="logo" />
-        <p class="wait">Please wait, good things take time</p>
+      <div class="logobox col-4 text-center">
+        <img class="logo" src="../images/notif@2x.png" alt="logo" />
+        <p class="wait">You don't have any notifications yet.</p>
       </div>
     </div>
   </div>
@@ -27,12 +27,13 @@ export default {
 }
 .logobox {
   top: calc(50vh - 125px);
-  width: auto;
+  width: 100%;
   position: fixed;
 }
 .wait {
   font-family: "roboto";
   font-size: 16px;
+  margin-top: 5%;
 }
 
 .Offers {
@@ -42,7 +43,7 @@ export default {
   width: 83px;
   height: 39px;
   text-align: left;
-  font: normal normal bold 2rem Roboto;
+  font: normal normal bold 1.8rem Roboto;
   letter-spacing: -0.3px;
   color: #1a1824;
   opacity: 1;
