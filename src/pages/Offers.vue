@@ -41,10 +41,11 @@ export default {
   width: 83px;
   height: 39px;
   text-align: left;
-  font: normal normal bold 30px/36px Roboto;
+  font: normal normal bold 2rem Roboto;
   letter-spacing: -0.3px;
   color: #1a1824;
   opacity: 1;
+  
 }
 
 .rowheight {
