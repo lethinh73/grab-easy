@@ -16,6 +16,7 @@
           :draggable="true"
           @click="center=m.position"
       />
+      <img class="gps"/>
     </GMapCluster>
     </GMapMap>
 
@@ -85,6 +86,16 @@ export default {
   box-sizing: border-box;
 }
 
+.gps{
+      width: 23px;
+      height: 23px;
+      position: absolute;
+      left:1250px;
+      bottom: 260px;
+      background: transparent url("../images/gps.svg");
+      opacity: 1;
+      /*border: 0;*/
+}
 .search{
     display: flex;
     flex-direction: column;
@@ -139,8 +150,8 @@ export default {
   box-shadow: 0px 0px 5px #00000029;
   border-radius: 5px;
   position: absolute;
+  padding-left: 10px;
 }
-
 
 
 @media (max-width: 299px){
@@ -170,9 +181,139 @@ export default {
  .map{
      height: 30vh;
  }
+ .gps{
+      width: 23px;
+      height: 23px;
+      position: absolute;
+      left:250px;
+      bottom: 260px;
+      background: transparent url("../images/gps.svg");
+      opacity: 1;
+      /*border: 0;*/
+}
 }
 
-@media (max-width: 668px) and (min-width: 300px) {
+@media (max-width: 329px) and (min-width: 300px) {
+      .search{
+        height: 200px;
+      }
+      .btn {
+        width: 100%;
+        bottom: 0;
+        font: normal normal bold 12px/17px Open Sans;
+        border-radius: 0;
+      }
+ .title{
+    width:300px;
+    position: absolute;
+    bottom: 150px;
+    font:normal normal bold 25px/22px Open Sans;
+ }
+
+ .myloc{
+   width: 300px;
+   position: absolute;
+   bottom: 110px;
+ }
+
+ .ipt{
+   width: 300px;
+   font-size: 15px;
+   position: absolute;
+   bottom: 70px;
+ }
+  .gps{
+      width: 23px;
+      height: 23px;
+      position: absolute;
+      left:290px;
+      bottom: 204px;
+      background: transparent url("../images/gps.svg");
+      opacity: 1;
+      /*border: 0;*/
+}
+}
+
+@media (max-width: 360px) and (min-width: 330px){
+        .search{
+        height: 200px;
+      }
+      .btn {
+        width: 100%;
+        bottom: 0;
+        font: normal normal bold 12px/17px Open Sans;
+        border-radius: 0;
+      }
+ .title{
+    width:300px;
+    position: absolute;
+    bottom: 150px;
+    font:normal normal bold 25px/22px Open Sans;
+ }
+
+ .myloc{
+   width: 300px;
+   position: absolute;
+   bottom: 110px;
+ }
+
+ .ipt{
+   width: 300px;
+   font-size: 15px;
+   position: absolute;
+   bottom: 65px;
+ }
+  .gps{
+      width: 23px;
+      height: 23px;
+      position: absolute;
+      left:330px;
+      bottom: 204px;
+      background: transparent url("../images/gps.svg");
+      opacity: 1;
+      /*border: 0;*/
+}
+}
+
+@media (max-width: 399px) and (min-width: 361px){
+   .btn {
+ width: 100%;
+ bottom: 0;
+ font: normal normal bold 12px/17px Open Sans;
+ border-radius: 0;
+ }
+ .title{
+    width:300px;
+    position: absolute;
+    bottom: 200px;
+    font:normal normal bold 25px/22px Open Sans;
+ }
+
+ .myloc{
+   width: 300px;
+   position: absolute;
+   bottom: 150px;
+ }
+
+ .ipt{
+   width: 300px;
+   font-size: 15px;
+   position: absolute;
+   bottom: 107px;
+ }
+  .gps{
+      width: 23px;
+      height: 23px;
+      position: absolute;
+      left:340px;
+      bottom: 255px;
+      background: transparent url("../images/gps.svg");
+      opacity: 1;
+      /*border: 0;*/
+}
+}
+
+@media (max-width: 668px) and (min-width: 400px) {
  .btn {
  width: 100%;
  bottom: 0;
@@ -188,21 +329,29 @@ export default {
 
  .myloc{
    width: 300px;
-   margin-top: 50px;
    position: absolute;
    bottom: 150px;
  }
 
  .ipt{
-   margin-top: 50px;
    width: 300px;
    font-size: 15px;
    position: absolute;
    bottom: 107px;
  }
+.gps{
+      width: 23px;
+      height: 23px;
+      position: absolute;
+      left:380px;
+      bottom: 260px;
+      background: transparent url("../images/gps.svg");
+      opacity: 1;
+      /*border: 0;*/
 }
- 
-@media (max-width: 992px) and (min-width: 760px) {
+}
+
+@media (max-width: 878px) and (min-width: 669px){
  .btn {
  width: 100%;
  height: 60px;
@@ -231,6 +380,57 @@ export default {
    position: absolute;
    bottom: 80px;
  }
+ .gps{
+      width: 23px;
+      height: 23px;
+      position: absolute;
+      left:840px;
+      bottom: 260px;
+      background: transparent url("../images/gps.svg");
+      opacity: 1;
+      /*border: 0;*/
+}
+}
+ 
+@media (max-width: 992px) and (min-width: 890px) {
+ .btn {
+ width: 100%;
+ height: 60px;
+ bottom: 0;
+ font: normal normal bold 24px/17px Open Sans;
+ border-radius: 0;
+ }
+
+  .title{
+    width:600px;
+    position: absolute;
+    font:normal normal bold 35px/22px Open Sans;
+ }
+
+ .myloc{
+   width:600px;
+   font: normal normal 600 20px/17px Open Sans;
+   position: absolute;
+   bottom: 160px;
+ }
+
+ .ipt{
+   width:600px;
+   height: 60px;
+   font-size: 30px;
+   position: absolute;
+   bottom: 80px;
+ }
+ .gps{
+      width: 23px;
+      height: 23px;
+      position: absolute;
+      left:730px;
+      bottom: 260px;
+      background: transparent url("../images/gps.svg");
+      opacity: 1;
+      /*border: 0;*/
+}
 }
  
 @media (max-width: 1200px) and (min-width: 993px) {
@@ -266,6 +466,16 @@ export default {
    position: absolute;
    bottom: 100px;
  }
+ .gps{
+      width: 23px;
+      height: 23px;
+      position: absolute;
+      left:980px;
+      bottom: 320px;
+      background: transparent url("../images/gps.svg");
+      opacity: 1;
+      /*border: 0;*/
+}
 }
 
 </style>
