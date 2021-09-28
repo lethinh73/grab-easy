@@ -118,7 +118,6 @@ a img {
 }
 
 .bottom {
-  background-color: blue;
   position: absolute;
   margin: auto auto 0 0;
   width: 100%;
