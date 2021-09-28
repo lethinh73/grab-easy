@@ -1,13 +1,28 @@
 <template>
   <div class="container d-flex justify-content-center align-items-center">
-    <form>
-      <img class="location" src="../images/location.svg" />
+    <form v-on:submit.prevent="addChat()">
+      <img class="location" src="../images/location.svg" v-on:click="addChat()" />
       <img class="next" src="../images/next.svg" />
-      <input type="text" placeholder="Banjara Hills " />
+      <input type="text" placeholder="Banjara Hills "/>
     </form>
   </div>
 </template>
-<script></script>
+
+<script>
+//test heroku
+let step = 1;
+
+export default {
+  methods: {
+    addChat: function() {
+      if (step === 1) {
+        this.$router.push("/GoogleMap");
+      }
+    }
+  }
+}
+</script>
+
 <style scoped>
 form {
   width: 100%;
