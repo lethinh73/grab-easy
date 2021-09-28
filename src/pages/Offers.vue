@@ -26,7 +26,7 @@ export default {
   height: auto;
 }
 .logobox {
-  margin-top: calc(50vh + 125px);
+  top: calc(50vh - 125px);
   width: auto;
   position: fixed;
 }
@@ -46,7 +46,6 @@ export default {
   letter-spacing: -0.3px;
   color: #1a1824;
   opacity: 1;
-  
 }
 
 .rowheight {

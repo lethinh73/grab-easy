@@ -6,7 +6,7 @@
     <div
       class=" rowheight row justify-content-center d-flex align-items-center"
     >
-      <div class="logobox col-4 col-lg-2 text-center">
+      <div class="logobox col-4 text-center">
         <img class="logo" src="../images/notif@2x.png" alt="logo" />
         <p class="wait">You don't have any notifications yet.</p>
       </div>
@@ -24,11 +24,10 @@ export default {
 .logo {
   width: 100%;
   height: auto;
-  
 }
 .logobox {
-  margin-top: calc(50vh + 125px);
-  width: auto;
+  top: calc(50vh - 125px);
+  width: 100%;
   position: fixed;
 }
 .wait {
@@ -48,7 +47,6 @@ export default {
   letter-spacing: -0.3px;
   color: #1a1824;
   opacity: 1;
-  
 }
 
 .rowheight {
