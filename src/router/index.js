@@ -7,7 +7,8 @@ import Offers from "../pages/Offers.vue";
 import orderSuccess from "../pages/orderSuccess.vue"
 import Profile from "../pages/Profile.vue";
 import Offers2 from "../pages/Offers2.vue";
-
+import Notifications from "../pages/Notifications.vue";
+import Notifications2 from "../pages/Notifications2.vue";
 const routes = [
   { path: "/", name: "Login", component: Login },
   { path: "/venue", name: "Venue", component: Venue },
@@ -17,6 +18,8 @@ const routes = [
   { path: "/orderSuccess", name: "orderSuccess", component: orderSuccess },
   { path: "/profile", name: "Profile", component: Profile },
   { path: "/offers2", name: "Offers2", component: Offers2 },
+  { path: "/Notifications", name: "Notifications", component: Notifications },
+  { path: "/Notifications2", name: "Notifications2", component: Notifications2 },
 ];
 
 const router = createRouter({
