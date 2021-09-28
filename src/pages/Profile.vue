@@ -119,7 +119,7 @@ a img {
 
 .bottom {
   position: absolute;
-  margin: auto auto 10px 0 !important;
+  margin: auto auto 0 0;
   width: 100%;
 }
 
