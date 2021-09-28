@@ -14,9 +14,7 @@
         <a href="http://www.facebook.com" v-on:click="gotoPage()"
           ><img src="../images/profile/facebook.svg" alt="facebook"
         /></a>
-        <a href="http://www.instagram.com"
-          ><img src="../images/profile/instagram.svg" alt="instagram"
-        /></a>
+        <a href="http://www.instagram.com"><img src="../images/profile/instagram.svg" alt="instagram"/></a>
         <a href="#"><img src="../images/profile/globe.svg" alt="globe"/></a>
       </span>
     </div>
