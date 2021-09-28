@@ -9,6 +9,7 @@ import Profile from "../pages/Profile.vue";
 import Offers2 from "../pages/Offers2.vue";
 import Notifications from "../pages/Notifications.vue";
 import Notifications2 from "../pages/Notifications2.vue";
+
 const routes = [
   { path: "/", name: "Login", component: Login },
   { path: "/venue", name: "Venue", component: Venue },
@@ -19,11 +20,7 @@ const routes = [
   { path: "/profile", name: "Profile", component: Profile },
   { path: "/offers2", name: "Offers2", component: Offers2 },
   { path: "/notifications", name: "Notifications", component: Notifications },
-  {
-    path: "/notifications2",
-    name: "Notifications2",
-    component: Notifications2,
-  },
+  { path: "/notifications2", name: "Notifications2", component: Notifications2 },
 ];
 
 const router = createRouter({
