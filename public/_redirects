@@ -1,9 +1,4 @@
-/
-/profile
-/venue
-/notifications
-/GoogleMap
-/items
-/offers
-/orderSuccess
-/offers2
+/                  https://grab-easy.netlify.app
+/venue             /venue
+/profile           /profile
+/offers            /offers
