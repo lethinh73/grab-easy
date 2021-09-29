@@ -58,11 +58,10 @@ body {
 .profile-container {
   width: 100%;
   height: 100%;
-  background-color: green;
 }
 
 .top {
-  margin: 2% auto auto 30px;
+  margin: 0 auto auto 30px;
   width: fit-content;
 }
 

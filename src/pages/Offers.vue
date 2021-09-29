@@ -50,7 +50,6 @@ export default {
   width: 100%;
   position: absolute;
   margin: 0;
-  background-color: green;
 }
 
 .navbar {
