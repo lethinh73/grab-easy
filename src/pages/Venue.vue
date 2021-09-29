@@ -1,23 +1,91 @@
 <template>
   <SearchBar class="fixed-top" />
-  <div class="d-flex justify-content-center container mt-5">
-    <img class="main" src="../images/main-store/lg.png" />
+  <!-- Carousel part -->
+  <div
+    id="carouselExampleIndicators"
+    class="carousel slide d-flex justify-content-center container mt-5"
+    data-bs-ride="carousel"
+  >
+    <div class="carousel-indicators">
+      <button
+        type="button"
+        data-bs-target="#carouselExampleIndicators"
+        data-bs-slide-to="0"
+        class="active"
+        aria-current="true"
+        aria-label="Slide 1"
+      ></button>
+      <button
+        type="button"
+        data-bs-target="#carouselExampleIndicators"
+        data-bs-slide-to="1"
+        aria-label="Slide 2"
+      ></button>
+      <button
+        type="button"
+        data-bs-target="#carouselExampleIndicators"
+        data-bs-slide-to="2"
+        aria-label="Slide 3"
+      ></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img
+          src="../images/main-store/lg.png"
+          class="d-block w-100"
+          alt="..."
+        />
+      </div>
+      <div class="carousel-item">
+        <img
+          src="../images/main-store/lg.png"
+          class="d-block w-100"
+          alt="..."
+        />
+      </div>
+      <div class="carousel-item">
+        <img
+          src="../images/main-store/lg.png"
+          class="d-block w-100"
+          alt="..."
+        />
+      </div>
+    </div>
+    <button
+      class="carousel-control-prev"
+      type="button"
+      data-bs-target="#carouselExampleIndicators"
+      data-bs-slide="prev"
+    >
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button
+      class="carousel-control-next"
+      type="button"
+      data-bs-target="#carouselExampleIndicators"
+      data-bs-slide="next"
+    >
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
   </div>
-  <div class="cannot-find container">
-    <p class="text-center rounded-pill my-3">
+  <!-- Cannot find part -->
+  <div class="cannot-find container mt-5">
+    <p class="text-center rounded-pill my-2">
       Cannot find any Creamston outlet near you, we are available at the below
       locations.
     </p>
   </div>
   <div class="order-at container">
-    <p class="fw-bold my-3">
+    <p class="fw-bold my-2">
       You can order using app at:
     </p>
   </div>
   <div class=" container">
     <div class=" scrolling-wrapper d-flex flex-nowrap ">
       <div
-        class="card-wrapper col-3 mb-3 me-4"
+        class="card-wrapper col-3 mb-3 me-3"
         v-for="place in places"
         :key="place.id"
       >
@@ -79,6 +147,11 @@ export default {
 };
 </script>
 <style scoped>
+.fixed-top,
+.fixed-bottom {
+  display: flex;
+  justify-content: center;
+}
 a.nav-link {
   color: black;
   text-decoration: none;
@@ -93,7 +166,8 @@ img.main {
 }
 .cannot-find p {
   background: #f5f5f5;
-  padding: 13px 35px;
+  padding: 13px 50px;
+  line-height: 1.6rem;
 }
 .order-at p {
   font-size: 1.1rem;
@@ -111,7 +185,34 @@ img.main {
 .card-wrapper {
   flex: 0 0 auto;
 }
-@media (min-width: 992px) {
+.card-wrapper p:nth-child(2) {
+  font-size: 10px;
+}
+.card-wrapper p:nth-child(3) {
+  font-size: 6px;
+}
+.carousel-control-next,
+.carousel-control-prev {
+  filter: invert(100%);
+}
+.carousel-indicators {
+  background: transparent;
+  bottom: -35px;
+}
+.carousel-indicators button {
+  width: 6px;
+  height: 6px;
+  margin: 2px;
+  cursor: pointer;
+  border: none;
+  border-radius: 50%;
+  background-color: #707070;
+}
+.carousel-indicators button.active {
+  width: 16px;
+  border-radius: 10px;
+}
+/* @media (min-width: 992px) {
   .place img {
     width: 80%;
   }
@@ -124,5 +225,5 @@ img.main {
   .order-at p {
     font-size: 1.2rem;
   }
-}
+} */
 </style>

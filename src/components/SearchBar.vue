@@ -1,9 +1,13 @@
 <template>
   <div class="container d-flex justify-content-center align-items-center">
     <form v-on:submit.prevent="addChat()">
-      <img class="location" src="../images/location.svg" v-on:click="addChat()" />
+      <img
+        class="location"
+        src="../images/location.svg"
+        v-on:click="addChat()"
+      />
       <img class="next" src="../images/next.svg" />
-      <input type="text" placeholder="Banjara Hills "/>
+      <input type="text" placeholder="Banjara Hills " />
     </form>
   </div>
 </template>
@@ -18,14 +22,14 @@ export default {
       if (step === 1) {
         this.$router.push("/GoogleMap");
       }
-    }
-  }
-}
+    },
+  },
+};
 </script>
 
 <style scoped>
 form {
-  width: 100%;
+  width: 360px;
   position: relative;
   padding: 5px 0;
 }
@@ -45,7 +49,7 @@ img.next {
   left: 120px;
   top: 40%;
 }
-@media (min-width: 768px) {
+/* @media (min-width: 768px) {
   form {
     padding: 10px 0;
   }
@@ -55,5 +59,5 @@ img.next {
     padding: 15px 0;
     font-size: 1.2rem;
   }
-}
+} */
 </style>
