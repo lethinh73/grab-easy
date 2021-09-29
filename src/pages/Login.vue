@@ -1,5 +1,5 @@
 <template>
-  <div class="view container-fluid">
+  <div class="view">
     <!-- Logo section -->
     <div class="logo row">
       <div class="col">
@@ -112,6 +112,8 @@ export default {
 
 <style scoped>
 .view {
+  width: 100%;
+  height: 100%;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;

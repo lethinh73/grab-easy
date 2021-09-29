@@ -49,22 +49,4 @@ export default {
 .nav-item img {
   height: 20px;
 }
-@media (min-width: 768px) {
-  .nav {
-    font-size: 0.9rem;
-  }
-  .nav-link {
-    padding: 0.8rem;
-  }
-}
-@media (min-width: 992px) {
-  .nav-link {
-    padding: 0.5rem 1rem;
-  }
-}
-@media (min-width: 1200px) {
-  .nav {
-    padding: 20px 30px;
-  }
-}
 </style>

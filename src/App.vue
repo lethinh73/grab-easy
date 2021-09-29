@@ -25,6 +25,8 @@ input {
   border: none;
 }
 .wrapper {
+  height: 640px;
   width: 360px;
+  position: relative;
 }
 </style>
