@@ -30,13 +30,25 @@
     </div>
     <div class="carousel-inner">
       <div class="carousel-item active">
-        <img src="../images/main-store/lg.png" class="d-block w-100" alt="..." />
+        <img
+          src="../images/main-store/lg.png"
+          class="d-block w-100"
+          alt="..."
+        />
       </div>
       <div class="carousel-item">
-        <img src="../images/main-store/lg.png" class="d-block w-100" alt="..." />
+        <img
+          src="../images/main-store/lg.png"
+          class="d-block w-100"
+          alt="..."
+        />
       </div>
       <div class="carousel-item">
-        <img src="../images/main-store/lg.png" class="d-block w-100" alt="..." />
+        <img
+          src="../images/main-store/lg.png"
+          class="d-block w-100"
+          alt="..."
+        />
       </div>
     </div>
     <button
@@ -58,27 +70,27 @@
       <span class="visually-hidden">Next</span>
     </button>
   </div>
-  <!-- Cannot find part -->
-  <div class="cannot-find container mt-5">
-    <p class="text-center rounded-pill my-2">
-      Cannot find any Creamston outlet near you, we are available at the below locations.
-    </p>
-  </div>
+  <!-- location part -->
+
   <div class="order-at container">
-    <p class="fw-bold my-2">
-      You can order using app at:
+    <p class="fw-bold mt-5 mb-3">
+      Where are you at?
     </p>
   </div>
   <div class=" container">
     <div class=" scrolling-wrapper d-flex flex-nowrap ">
-      <div class="card-wrapper col-3 mb-3 me-3" v-for="place in places" :key="place.id">
-        <img :src="require(`../images/place-name/${place.img}`)" />
+      <div
+        class="card-wrapper col-4 mb-3 me-3"
+        v-for="place in places"
+        :key="place.id"
+      >
+        <img :src="require(`../images/no-venue-cream-stone/${place.img}`)" />
         <p class="mt-2 mb-1">{{ place.name }}</p>
         <p class="area-name text-secondary">{{ place.area }}</p>
       </div>
     </div>
   </div>
-  <Navbar />
+  <Navbar class="fixed-bottom" />
 </template>
 <script scoped>
 import Navbar from "../components/Navbar.vue";
@@ -90,39 +102,33 @@ export default {
       places: [
         {
           id: 1,
-          name: "Place Name",
-          area: "Area Name",
-          img: "@2x.png",
+          name: "Creamstone",
+          area: "City Center",
+          img: "no-venue-cream-stone@2x.png",
         },
         {
           id: 2,
-          name: "Place Name",
-          area: "Area Name",
-          img: "@2x.png",
+          name: "Creamstone",
+          area: "City Center",
+          img: "no-venue-cream-stone@2x.png",
         },
         {
           id: 3,
-          name: "Place Name",
-          area: "Area Name",
-          img: "@2x.png",
+          name: "Creamstone",
+          area: "City Center",
+          img: "no-venue-cream-stone@2x.png",
         },
         {
           id: 4,
-          name: "Place Name",
-          area: "Area Name",
-          img: "@2x.png",
+          name: "Creamstone",
+          area: "City Center",
+          img: "no-venue-cream-stone@2x.png",
         },
         {
           id: 5,
-          name: "Place Name",
-          area: "Area Name",
-          img: "@2x.png",
-        },
-        {
-          id: 6,
-          name: "Place Name",
-          area: "Area Name",
-          img: "@2x.png",
+          name: "Creamstone",
+          area: "City Center",
+          img: "no-venue-cream-stone@2x.png",
         },
       ],
     };
@@ -147,11 +153,6 @@ img.main {
   width: 100%;
   object-fit: contain;
 }
-.cannot-find p {
-  background: #f5f5f5;
-  padding: 13px 50px;
-  line-height: 1.6rem;
-}
 .order-at p {
   font-size: 1.1rem;
 }
@@ -172,7 +173,7 @@ img.main {
   font-size: 10px;
 }
 .card-wrapper p:nth-child(3) {
-  font-size: 6px;
+  font-size: 8px;
 }
 .carousel-control-next,
 .carousel-control-prev {
