@@ -1,5 +1,7 @@
 <template>
-  <router-view />
+  <div class="wrapper">
+    <router-view />
+  </div>
 </template>
 
 <script>
@@ -11,15 +13,18 @@ export default {
 * {
   font-family: "Roboto", sans-serif;
   font-size: 12px;
-  margin: 0;
-  padding: 0;
 }
 
 body {
   margin: 0;
+  display: flex;
+  justify-content: center;
 }
 
 input {
   border: none;
+}
+.wrapper {
+  width: 360px;
 }
 </style>
