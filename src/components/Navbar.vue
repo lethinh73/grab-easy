@@ -37,6 +37,7 @@ export default {
   padding: 10px 0;
   font-size: 0.6rem;
   flex-wrap: nowrap;
+  width: 360px;
 }
 .nav-item {
   display: flex;
@@ -49,7 +50,7 @@ export default {
 .nav-item img {
   height: 20px;
 }
-@media (min-width: 768px) {
+/* @media (min-width: 768px) {
   .nav {
     font-size: 0.9rem;
   }
@@ -66,5 +67,5 @@ export default {
   .nav {
     padding: 20px 30px;
   }
-}
+} */
 </style>
