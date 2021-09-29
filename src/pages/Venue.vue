@@ -30,25 +30,13 @@
     </div>
     <div class="carousel-inner">
       <div class="carousel-item active">
-        <img
-          src="../images/main-store/lg.png"
-          class="d-block w-100"
-          alt="..."
-        />
+        <img src="../images/main-store/lg.png" class="d-block w-100" alt="..." />
       </div>
       <div class="carousel-item">
-        <img
-          src="../images/main-store/lg.png"
-          class="d-block w-100"
-          alt="..."
-        />
+        <img src="../images/main-store/lg.png" class="d-block w-100" alt="..." />
       </div>
       <div class="carousel-item">
-        <img
-          src="../images/main-store/lg.png"
-          class="d-block w-100"
-          alt="..."
-        />
+        <img src="../images/main-store/lg.png" class="d-block w-100" alt="..." />
       </div>
     </div>
     <button
@@ -73,8 +61,7 @@
   <!-- Cannot find part -->
   <div class="cannot-find container mt-5">
     <p class="text-center rounded-pill my-2">
-      Cannot find any Creamston outlet near you, we are available at the below
-      locations.
+      Cannot find any Creamston outlet near you, we are available at the below locations.
     </p>
   </div>
   <div class="order-at container">
@@ -84,18 +71,14 @@
   </div>
   <div class=" container">
     <div class=" scrolling-wrapper d-flex flex-nowrap ">
-      <div
-        class="card-wrapper col-3 mb-3 me-3"
-        v-for="place in places"
-        :key="place.id"
-      >
+      <div class="card-wrapper col-3 mb-3 me-3" v-for="place in places" :key="place.id">
         <img :src="require(`../images/place-name/${place.img}`)" />
         <p class="mt-2 mb-1">{{ place.name }}</p>
         <p class="area-name text-secondary">{{ place.area }}</p>
       </div>
     </div>
   </div>
-  <Navbar class="fixed-bottom" />
+  <Navbar />
 </template>
 <script scoped>
 import Navbar from "../components/Navbar.vue";
