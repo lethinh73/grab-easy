@@ -118,7 +118,7 @@ export default {
   /* bottom: 0; */
 }
 .sub-search {
-  width: 360px;
+  width: 80%;
   /* padding-right: 30px; */
 }
 .title {
