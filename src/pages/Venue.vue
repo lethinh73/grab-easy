@@ -53,9 +53,6 @@
         </div>
       </div>
     </div>
-    <div class="search">
-      <SearchBar />
-    </div>
     <!-- Cannot find part -->
     <div class="cannot-find container mt-5">
       <p class="text-center rounded-pill my-2">
