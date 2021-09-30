@@ -45,16 +45,6 @@ export default {
 </script>
 
 <style scoped>
-/* * {
-  border: 1px solid black;
-} */
-
-body {
-  display: flex;
-  flex-flow: column;
-  flex-wrap: nowrap;
-}
-
 .profile-container {
   width: 100%;
   height: 100%;
@@ -79,7 +69,7 @@ body {
 }
 
 .middle {
-  position: fixed;
+  position: absolute;
   bottom: calc(50% - 30px);
   margin: auto auto auto 30px;
   display: flex;

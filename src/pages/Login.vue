@@ -123,7 +123,8 @@ export default {
 }
 
 .logo.row {
-  top: 15%;
+  position: absolute;
+  margin-top: 15%;
   width: 100%;
   text-align: center;
 }
@@ -152,7 +153,7 @@ export default {
 
 .text.col {
   width: 500px;
-  margin-left: calc(50% - 125px);
+  margin-left: calc(50% - 130px);
 }
 
 .input.col {
@@ -160,7 +161,7 @@ export default {
   flex-direction: row;
   width: 500px;
   height: fit-content;
-  margin-left: calc(50% - 125px);
+  margin-left: calc(50% - 130px);
 }
 
 #area-code {
@@ -205,25 +206,7 @@ form {
 }
 
 .logo {
-  width: 40%;
+  width: 15rem;
   height: auto;
-}
-
-@media (min-width: 768px) {
-  .logo {
-    width: 320px;
-  }
-}
-
-@media (min-width: 992px) {
-  .logo {
-    width: 340px;
-  }
-}
-
-@media (min-width: 1200px) {
-  .logo {
-    width: 360px;
-  }
 }
 </style>
