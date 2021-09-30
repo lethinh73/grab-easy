@@ -124,7 +124,7 @@ export default {
 }
 
 .logo.row {
-  position: absolute;
+  position: relative;
   margin-top: 50px;
   width: 100%;
   text-align: center;
@@ -132,14 +132,14 @@ export default {
 }
 
 .middle.row {
+  position: relative;
   display: flex;
   flex-direction: column-reverse;
   width: 100%;
-  min-height: 200px;
   overflow: auto;
   -ms-overflow-style: none;
   scrollbar-width: none;
-  margin: 200px auto 100px auto;
+  margin: auto auto 80px auto;
 }
 
 .middle.row::-webkit-scrollbar {
