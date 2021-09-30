@@ -1,5 +1,7 @@
 <template>
-  <SearchBar class="fixed-top" />
+  <div class="search">
+    <SearchBar />
+  </div>
   <!-- Carousel part -->
   <div
     id="carouselExampleIndicators"
@@ -78,7 +80,7 @@
       </div>
     </div>
   </div>
-  <Navbar />
+  <Navbar class="nav" />
 </template>
 <script scoped>
 import Navbar from "../components/Navbar.vue";
@@ -130,11 +132,21 @@ export default {
 };
 </script>
 <style scoped>
-.fixed-top,
-.fixed-bottom {
+.search {
+  position: absolute;
+  margin-top: 0;
+  left: 0;
   display: flex;
   justify-content: center;
 }
+
+.nav {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+}
+
 a.nav-link {
   color: black;
   text-decoration: none;

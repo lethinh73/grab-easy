@@ -31,13 +31,17 @@ export default {
 };
 </script>
 <style scoped>
+* {
+  box-sizing: border-box;
+}
 .nav {
   background: #f5f5f5;
   justify-content: center;
   padding: 10px 0;
   font-size: 0.6rem;
   flex-wrap: nowrap;
-  width: 360px;
+  width: 100%;
+  height: 80px;
 }
 .nav-item {
   display: flex;
