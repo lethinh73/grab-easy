@@ -47,6 +47,5 @@ input {
   width: 100vw;
   max-width: 420px;
   height: 100vh;
-
 }
 </style>

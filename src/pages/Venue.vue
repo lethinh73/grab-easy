@@ -52,6 +52,24 @@
           />
         </div>
       </div>
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#carouselExampleIndicators"
+        data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#carouselExampleIndicators"
+        data-bs-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
     </div>
     <!-- Cannot find part -->
     <div class="cannot-find container mt-5">
@@ -131,23 +149,13 @@ export default {
 };
 </script>
 <style scoped>
-.search {
-  position: absolute;
-  margin-top: 0;
-  left: 0;
-  display: flex;
-  justify-content: center;
-}
-
-.nav {
-  position: absolute;
-  bottom: 0;
+.fixed-top,
+.fixed-bottom {
   display: flex;
   justify-content: center;
   width: 100%;
   max-width: 420px;
 }
-
 a.nav-link {
   color: black;
   text-decoration: none;
