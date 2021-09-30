@@ -1,4 +1,59 @@
 <template>
+
+  <div class="wrapper">
+    <SearchBar class="fixed-top" />
+    <!-- Carousel part -->
+    <div
+      id="carouselExampleIndicators"
+      class="carousel slide d-flex justify-content-center container mt-5"
+      data-bs-ride="carousel"
+    >
+      <div class="carousel-indicators">
+        <button
+          type="button"
+          data-bs-target="#carouselExampleIndicators"
+          data-bs-slide-to="0"
+          class="active"
+          aria-current="true"
+          aria-label="Slide 1"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#carouselExampleIndicators"
+          data-bs-slide-to="1"
+          aria-label="Slide 2"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#carouselExampleIndicators"
+          data-bs-slide-to="2"
+          aria-label="Slide 3"
+        ></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img
+            src="../images/main-store/lg.png"
+            class="d-block w-100"
+            alt="..."
+          />
+        </div>
+        <div class="carousel-item">
+          <img
+            src="../images/main-store/lg.png"
+            class="d-block w-100"
+            alt="..."
+          />
+        </div>
+        <div class="carousel-item">
+          <img
+            src="../images/main-store/lg.png"
+            class="d-block w-100"
+            alt="..."
+          />
+        </div>
+      </div>
+
   <div class="search">
     <SearchBar />
   </div>
@@ -17,19 +72,51 @@
         aria-current="true"
         aria-label="Slide 1"
       ></button>
+
       <button
+        class="carousel-control-prev"
         type="button"
         data-bs-target="#carouselExampleIndicators"
-        data-bs-slide-to="1"
-        aria-label="Slide 2"
-      ></button>
+        data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
       <button
+        class="carousel-control-next"
         type="button"
         data-bs-target="#carouselExampleIndicators"
-        data-bs-slide-to="2"
-        aria-label="Slide 3"
-      ></button>
+        data-bs-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
     </div>
+
+    <!-- Cannot find part -->
+    <div class="cannot-find container mt-5">
+      <p class="text-center rounded-pill my-2">
+        Cannot find any Creamston outlet near you, we are available at the below
+        locations.
+      </p>
+    </div>
+    <div class="order-at container">
+      <p class="fw-bold my-2">
+        You can order using app at:
+      </p>
+    </div>
+    <div class=" container">
+      <div class=" scrolling-wrapper d-flex flex-nowrap ">
+        <div
+          class="card-wrapper col-3 mb-3 me-3"
+          v-for="place in places"
+          :key="place.id"
+        >
+          <img :src="require(`../images/place-name/${place.img}`)" />
+          <p class="mt-2 mb-1">{{ place.name }}</p>
+          <p class="area-name text-secondary">{{ place.area }}</p>
+        </div>
+
     <div class="carousel-inner">
       <div class="carousel-item active">
         <img src="../images/main-store/lg.png" class="d-block w-100" alt="..." />
@@ -77,10 +164,14 @@
         <img :src="require(`../images/place-name/${place.img}`)" />
         <p class="mt-2 mb-1">{{ place.name }}</p>
         <p class="area-name text-secondary">{{ place.area }}</p>
+
       </div>
     </div>
+    <Navbar class="fixed-bottom" />
   </div>
+
   <Navbar class="nav" />
+
 </template>
 <script scoped>
 import Navbar from "../components/Navbar.vue";
@@ -145,6 +236,8 @@ export default {
   bottom: 0;
   display: flex;
   justify-content: center;
+  width: 100%;
+  max-width: 420px;
 }
 
 a.nav-link {

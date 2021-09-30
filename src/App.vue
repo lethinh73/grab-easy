@@ -1,5 +1,6 @@
 <template>
   <div class="wrapper">
+    <!-- v-bind:style="{ width: widthSize + 'px', height: heightSize }" -->
     <router-view />
   </div>
 </template>
@@ -7,6 +8,19 @@
 <script>
 export default {
   name: "App",
+  data() {
+    return {
+      widthSize: 0,
+      heightSize: 0,
+    };
+  },
+  methods: {
+    getScreenSize() {
+      this.widthSize = window.innerWidth;
+      this.heightSize = window.innerHeight;
+      console.log(window.innerWidth);
+    },
+  },
 };
 </script>
 <style>
@@ -30,9 +44,9 @@ input {
   border: none;
 }
 .wrapper {
-  border: 1px black solid;
+  width: 100vw;
+  max-width: 420px;
   height: 100vh;
-  width: calc(100vh * 0.5625);
-  position: relative;
+
 }
 </style>

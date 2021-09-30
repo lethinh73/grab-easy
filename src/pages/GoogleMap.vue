@@ -1,7 +1,14 @@
 <template>
   <div>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <GMapMap class="map" :center="center" :zoom="7" map-type-id="terrain" style="width:100%; height:100%;">
+    <GMapMap
+      class="map"
+      :center="center"
+      :zoom="7"
+      map-type-id="terrain"
+      style="width:100%; height:100%; position: absolute;"
+    >
+
       <GMapCluster>
         <GMapMarker
           :key="index"
@@ -14,11 +21,18 @@
       </GMapCluster>
     </GMapMap>
 
-    <div class="search">
+    <div class="search fixed-bottom">
       <div class="title">Select Location</div>
       <div class="myloc">Your Location</div>
-      <input class="ipt" placeholder="Please Enter A Location" v-on:submit.prevent="addChat()" />
-      <button class="btn" @click="addMarker" v-on:click="addChat()">Confirm Location & Proceed</button>
+      <input
+        class="ipt"
+        placeholder="Please Enter A Location"
+        v-on:submit.prevent="addChat()"
+      />
+      <button class="btn" @click="addMarker" v-on:click="addChat()">
+        Confirm Location & Proceed
+      </button>
+
     </div>
   </div>
 </template>
@@ -90,6 +104,8 @@ export default {
   align-items: center;
   height: 250px;
   width: 100%;
+
+  max-width: 420px;
   background: #ffffff 0% 0% no-repeat padding-box;
   box-shadow: 0px 0px 5px #00000029;
   border-radius: 12px 12px 0px 0px;
@@ -123,7 +139,7 @@ export default {
   box-shadow: 0px 0px 5px #00000029;
   opacity: 1;
   position: absolute;
-  bottom: 40px;
+  bottom: 0;
   color: white;
   border: 0;
   border-radius: 5px;
