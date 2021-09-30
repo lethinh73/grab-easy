@@ -79,7 +79,7 @@ body {
 }
 
 .middle {
-  position: fixed;
+  position: absolute;
   bottom: calc(50% - 30px);
   margin: auto auto auto 30px;
   display: flex;
