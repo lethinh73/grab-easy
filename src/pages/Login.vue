@@ -6,7 +6,6 @@
         <img class="logo" src="../images/grabeasy.png" alt="logo" />
       </div>
     </div>
-    <div class="over" />
     <!-- End logo section -->
 
     <div class="middle row">
@@ -30,11 +29,7 @@
               </select>
             </span>
             <form v-on:submit.prevent="addChat()">
-              <input
-                id="input-content"
-                type="text"
-                placeholder="Enter your phone number"
-              />
+              <input id="input-content" type="text" placeholder="Enter your phone number" />
             </form>
           </div>
           <button class="enter-btn" v-on:click="addChat()">
@@ -69,9 +64,7 @@ export default {
           this.printUserChat();
           this.printBotChat("Enter the received OTP on +1" + phoneNumber);
           document.querySelector("#area-code-container").remove();
-          document
-            .querySelector("#input-content")
-            .setAttribute("placeholder", "Enter your OTP");
+          document.querySelector("#input-content").setAttribute("placeholder", "Enter your OTP");
           step++;
         } else {
           this.printBotChat("Please enter your phone number again!");
@@ -81,9 +74,7 @@ export default {
         if (chatContent.length > 0) {
           this.printUserChat();
           this.printBotChat("Enter your name:");
-          document
-            .querySelector("#input-content")
-            .setAttribute("placeholder", "Enter your name");
+          document.querySelector("#input-content").setAttribute("placeholder", "Enter your name");
           step++;
         } else {
           this.printBotChat("You entered nothing!");
@@ -93,9 +84,7 @@ export default {
         if (name.length > 0) {
           this.printUserChat();
           this.printBotChat("Hi, " + name + "! Press Enter to proceed");
-          document
-            .querySelector("#input-content")
-            .setAttribute("placeholder", "Press enter to proceed");
+          document.querySelector("#input-content").setAttribute("placeholder", "Press enter to proceed");
           step++;
         } else {
           this.printBotChat("You entered nothing!");
@@ -112,8 +101,7 @@ export default {
       document.querySelector("#input-content").value = "";
     },
     printBotChat: function(content) {
-      document.querySelector("#chat-screen").innerHTML +=
-        "<p>" + content + "</p>";
+      document.querySelector("#chat-screen").innerHTML += "<p>" + content + "</p>";
     },
     updatePlaceHolder: function(content) {
       document.querySelector("#input-content").value(content);
@@ -124,6 +112,7 @@ export default {
 
 <style scoped>
 .view {
+  position: absolute;
   width: 100%;
   height: 100%;
   box-sizing: border-box;
@@ -133,32 +122,27 @@ export default {
   margin: 0;
   background-color: black;
   align-items: center;
-  /* position: relative; */
-}
-
-.over {
-  overflow: hidden;
+  /* border: 1px white solid; */
 }
 
 .logo.row {
-  /* position: absolute; */
+  position: relative;
   margin-top: 50px;
   width: 100%;
   text-align: center;
+  /* border: 1px white solid; */
 }
 
 .middle.row {
+  /* border: 1px white solid; */
+  position: relative;
   display: flex;
   flex-direction: column-reverse;
-  margin: auto;
   width: 100%;
-  height: 100%;
-  min-height: 200px;
   overflow: auto;
   -ms-overflow-style: none;
   scrollbar-width: none;
-  position: absolute;
-  bottom: 80px;
+  margin: auto auto 0px auto;
 }
 
 .middle.row::-webkit-scrollbar {
@@ -168,8 +152,9 @@ export default {
 .bottom.row {
   width: 100%;
   height: fit-content;
-  position: absolute;
-  bottom: 35px;
+  position: relative;
+  margin-bottom: 30px;
+  /* border: 1px white solid; */
 }
 
 .text.col {
