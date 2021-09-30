@@ -47,8 +47,6 @@ export default {
 </script>
 
 <style scoped>
-<<<<<<< HEAD
-=======
 /* * {
   border: 1px solid black;
 } */
@@ -66,7 +64,6 @@ export default {
   padding: 0;
 } */
 
->>>>>>> dev_vi
 .profile-container {
   display: flex;
   flex-direction: column;
