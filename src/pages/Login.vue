@@ -135,7 +135,6 @@ export default {
 }
 
 .middle.row {
-  border: 1px white solid;
   position: fixed;
   display: flex;
   flex-direction: column-reverse;
