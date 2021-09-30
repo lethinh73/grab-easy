@@ -51,7 +51,7 @@ export default {
   border: 1px solid black;
 } */
 
-/* body {
+body {
   display: flex;
   flex-flow: column;
   flex-wrap: nowrap;
@@ -62,13 +62,12 @@ export default {
   right: 0;
   margin: 0;
   padding: 0;
-} */
+}
 
 .profile-container {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-
   width: 100%;
   height: 100%;
 }
