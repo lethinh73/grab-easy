@@ -112,6 +112,7 @@ export default {
 
 <style scoped>
 .view {
+  position: absolute;
   width: 100%;
   height: 100%;
   box-sizing: border-box;
@@ -121,6 +122,7 @@ export default {
   margin: 0;
   background-color: black;
   align-items: center;
+  /* border: 1px white solid; */
 }
 
 .logo.row {
@@ -128,10 +130,11 @@ export default {
   margin-top: 50px;
   width: 100%;
   text-align: center;
-  z-index: 2;
+  /* border: 1px white solid; */
 }
 
 .middle.row {
+  /* border: 1px white solid; */
   position: relative;
   display: flex;
   flex-direction: column-reverse;
@@ -139,7 +142,7 @@ export default {
   overflow: auto;
   -ms-overflow-style: none;
   scrollbar-width: none;
-  margin: auto auto 80px auto;
+  margin: auto auto 0px auto;
 }
 
 .middle.row::-webkit-scrollbar {
@@ -149,8 +152,9 @@ export default {
 .bottom.row {
   width: 100%;
   height: fit-content;
-  position: absolute;
-  bottom: 35px;
+  position: relative;
+  margin-bottom: 30px;
+  /* border: 1px white solid; */
 }
 
 .text.col {
