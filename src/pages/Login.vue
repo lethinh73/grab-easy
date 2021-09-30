@@ -6,6 +6,7 @@
         <img class="logo" src="../images/grabeasy.png" alt="logo" />
       </div>
     </div>
+    <div class="over" />
     <!-- End logo section -->
 
     <div class="middle row">
@@ -131,12 +132,17 @@ export default {
   color: white;
   margin: 0;
   background-color: black;
-  height: 100%;
+  align-items: center;
+  /* position: relative; */
+}
+
+.over {
+  overflow: hidden;
 }
 
 .logo.row {
-  position: absolute;
-  margin-top: 15%;
+  /* position: absolute; */
+  margin-top: 50px;
   width: 100%;
   text-align: center;
 }
@@ -151,6 +157,8 @@ export default {
   overflow: auto;
   -ms-overflow-style: none;
   scrollbar-width: none;
+  position: absolute;
+  bottom: 80px;
 }
 
 .middle.row::-webkit-scrollbar {
@@ -160,7 +168,8 @@ export default {
 .bottom.row {
   width: 100%;
   height: fit-content;
-  margin-bottom: 35px;
+  position: absolute;
+  bottom: 35px;
 }
 
 .text.col {
