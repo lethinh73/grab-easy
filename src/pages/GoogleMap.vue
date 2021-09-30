@@ -103,7 +103,7 @@ export default {
 .search {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: left;
   align-items: center;
   width: 100vw;
   max-width: 420px;
@@ -114,15 +114,17 @@ export default {
   /* overflow: hidden; */
   position: relative;
   background-color: white;
+  padding-top: 40px;
   /* bottom: 0; */
 }
-.subsearch {
-  width: 333px;
+.sub-search {
+  width: 80%;
+  /* padding-right: 30px; */
 }
 .title {
   /* width: 333px; */
   /* position: absolute; */
-  margin-bottom: 10px;
+  margin-bottom: 30px;
   font: normal normal bold 25px/22px Open Sans;
 }
 .myloc {
@@ -148,7 +150,6 @@ export default {
   border: 0;
   border-radius: 5px;
 }
-
 .ipt {
   width: 100%;
   height: 39px;
@@ -156,6 +157,7 @@ export default {
   border: 0;
   box-shadow: 0px 0px 5px #00000029;
   border-radius: 5px;
+  padding-left: 10px;
   /* position: absolute; */
 }
 .gps {
