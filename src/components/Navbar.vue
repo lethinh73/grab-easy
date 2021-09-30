@@ -40,6 +40,9 @@ export default {
 };
 </script>
 <style scoped>
+* {
+  box-sizing: border-box;
+}
 .nav {
   background: #f5f5f5;
   justify-content: center;
@@ -48,6 +51,7 @@ export default {
   flex-wrap: nowrap;
   width: 100vw;
   max-width: 420px;
+  height: 80px;
 }
 
 .nav-item {

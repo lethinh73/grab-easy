@@ -8,6 +8,7 @@
       map-type-id="terrain"
       style="width:100%; height:100%; position: absolute;"
     >
+
       <GMapCluster>
         <GMapMarker
           :key="index"
@@ -31,6 +32,7 @@
       <button class="btn" @click="addMarker" v-on:click="addChat()">
         Confirm Location & Proceed
       </button>
+
     </div>
   </div>
 </template>
@@ -102,6 +104,7 @@ export default {
   align-items: center;
   height: 250px;
   width: 100%;
+
   max-width: 420px;
   background: #ffffff 0% 0% no-repeat padding-box;
   box-shadow: 0px 0px 5px #00000029;

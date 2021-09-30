@@ -74,7 +74,7 @@ export default {
 }
 
 .top {
-  margin: 2% auto auto 30px;
+  margin: 0 auto auto 30px;
   width: fit-content;
 }
 
@@ -92,7 +92,7 @@ export default {
 }
 
 .middle {
-  position: fixed;
+  position: absolute;
   bottom: calc(50% - 30px);
   margin: auto auto auto 30px;
   display: flex;
@@ -121,7 +121,7 @@ a img {
 
 .bottom {
   position: absolute;
-  margin: auto auto 0 0;
+  margin: 0;
   width: 100%;
 }
 
