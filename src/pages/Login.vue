@@ -139,7 +139,7 @@ export default {
   display: flex;
   flex-direction: column-reverse;
   width: 100%;
-  max-height: 60%;
+  max-height: 50%;
   overflow: auto;
   -ms-overflow-style: none;
   scrollbar-width: none;
