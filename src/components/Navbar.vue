@@ -49,11 +49,11 @@ export default {
   padding: 10px 0;
   font-size: 0.6rem;
   flex-wrap: nowrap;
-  width: 100%;
-
-
+  width: 100vw;
+  max-width: 420px;
   height: 80px;
 }
+
 .nav-item {
   display: flex;
   flex-direction: column;

@@ -1,14 +1,7 @@
 <template>
   <div>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <GMapMap
-      class="map"
-      :center="center"
-      :zoom="7"
-      map-type-id="terrain"
-      style="width:100%; height:100%; position: absolute;"
-    >
-
+    <GMapMap class="map" :center="center" :zoom="7" map-type-id="terrain">
       <GMapCluster>
         <GMapMarker
           :key="index"
@@ -21,18 +14,24 @@
       </GMapCluster>
     </GMapMap>
 
-    <div class="search fixed-bottom">
-      <div class="title">Select Location</div>
-      <div class="myloc">Your Location</div>
-      <input
-        class="ipt"
-        placeholder="Please Enter A Location"
-        v-on:submit.prevent="addChat()"
-      />
-      <button class="btn" @click="addMarker" v-on:click="addChat()">
-        Confirm Location & Proceed
-      </button>
+    <div class="fixed-bottom">
+      <div class="search">
+        <div class="sub-search">
+          <div class="title">Select Location</div>
+          <div class="myloc">Your Location</div>
+          <input
+            class="ipt"
+            s
+            placeholder="Please Enter A Location"
+            v-on:submit.prevent="addChat()"
+          />
+        </div>
 
+        <button class="btn" @click="addMarker" v-on:click="addChat()">
+          Confirm Location & Proceed
+        </button>
+        <div class="gps"></div>
+      </div>
     </div>
   </div>
 </template>
@@ -96,44 +95,49 @@ export default {
 * {
   box-sizing: border-box;
 }
-
+.fixed-bottom {
+  height: 250px;
+  display: flex;
+  justify-content: center;
+}
 .search {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 250px;
-  width: 100%;
-
+  width: 100vw;
   max-width: 420px;
   background: #ffffff 0% 0% no-repeat padding-box;
   box-shadow: 0px 0px 5px #00000029;
   border-radius: 12px 12px 0px 0px;
   opacity: 1;
-  overflow: hidden;
-  position: absolute;
+  /* overflow: hidden; */
+  position: relative;
   background-color: white;
-  bottom: 0;
+  /* bottom: 0; */
 }
-
-.title {
+.subsearch {
   width: 333px;
-  position: absolute;
-  bottom: 200px;
+}
+.title {
+  /* width: 333px; */
+  /* position: absolute; */
+  margin-bottom: 10px;
   font: normal normal bold 25px/22px Open Sans;
 }
 .myloc {
-  width: 333px;
+  /* width: 333px; */
   font: normal normal 600 15px/17px Open Sans;
-  position: absolute;
-  bottom: 150px;
+  margin-bottom: 10px;
+  /* position: absolute; */
+  /* bottom: 150px; */
 }
 
 .map {
-  height: 70vh;
+  height: 100vh;
 }
 .btn {
-  width: 240px;
+  width: 100%;
   height: 42px;
   background: #521d0d 0% 0% no-repeat padding-box;
   box-shadow: 0px 0px 5px #00000029;
@@ -146,15 +150,25 @@ export default {
 }
 
 .ipt {
-  width: 333px;
+  width: 100%;
   height: 39px;
   background: #ffffff 0% 0% no-repeat padding-box;
   border: 0;
   box-shadow: 0px 0px 5px #00000029;
   border-radius: 5px;
-  position: absolute;
+  /* position: absolute; */
 }
-
+.gps {
+  width: 23px;
+  height: 23px;
+  position: absolute;
+  right: 20px;
+  top: -40px;
+  background: transparent url("../images/gps.svg");
+  opacity: 1;
+  /*border: 0;*/
+}
+/* 
 @media (max-width: 299px) {
   .title {
     width: 250px;
@@ -278,5 +292,5 @@ export default {
     position: absolute;
     bottom: 100px;
   }
-}
+} */
 </style>

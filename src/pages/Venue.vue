@@ -154,7 +154,6 @@ export default {
   display: flex;
   justify-content: center;
   width: 100%;
-  max-width: 420px;
 }
 a.nav-link {
   color: black;
