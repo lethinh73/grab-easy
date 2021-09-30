@@ -1,5 +1,6 @@
 <template>
   <div>
+    <!-- v-bind:style="{ width: widthSize }" -->
     <ul class="nav">
       <li class="nav-item" v-on:click="gotoPage('/venue')">
         <img src="../images/sydney-opera-house.svg" />
@@ -23,9 +24,17 @@
 <script>
 export default {
   name: "Navbar",
+  data() {
+    return {
+      widthSize: 0,
+    };
+  },
   methods: {
     gotoPage: function(destination) {
       this.$router.push(destination);
+    },
+    getWidthSize() {
+      this.widthSize = window.innerWidth;
     },
   },
 };
@@ -37,7 +46,7 @@ export default {
   padding: 10px 0;
   font-size: 0.6rem;
   flex-wrap: nowrap;
-  width: 360px;
+  width: 100%;
 }
 .nav-item {
   display: flex;
