@@ -45,7 +45,8 @@ input {
 }
 .wrapper {
   width: 100vw;
-  max-width: 420px;
   height: 100vh;
+  max-width: 420px;
+  position: relative;
 }
 </style>

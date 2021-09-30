@@ -36,7 +36,8 @@ export default {
 .Offers {
   position: absolute;
   margin-top: 30px;
-  width: 83px;
+  left: calc(50% - 180px);
+  width: 100%;
   height: 39px;
   text-align: left;
   font: normal normal bold 2rem Roboto;
@@ -48,12 +49,12 @@ export default {
 .rowheight {
   height: 100%;
   width: 100%;
-  position: absolute;
-  margin: 0;
+  position: fixed;
+  left: calc(50% - 50vw);
 }
 
 .navbar {
-  position: absolute;
+  position: fixed;
   bottom: 0;
   width: 100%;
   padding: 0;
