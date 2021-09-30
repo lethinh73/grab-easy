@@ -47,13 +47,11 @@ export default {
 </script>
 
 <style scoped>
-<<<<<<< HEAD
-=======
 /* * {
   border: 1px solid black;
 } */
 
-/* body {
+body {
   display: flex;
   flex-flow: column;
   flex-wrap: nowrap;
@@ -64,20 +62,18 @@ export default {
   right: 0;
   margin: 0;
   padding: 0;
-} */
+}
 
->>>>>>> dev_vi
 .profile-container {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-
   width: 100%;
   height: 100%;
 }
 
 .top {
-  margin: 0 auto auto 30px;
+  margin: 2% auto auto 30px;
   width: fit-content;
 }
 
@@ -95,7 +91,7 @@ export default {
 }
 
 .middle {
-  position: absolute;
+  position: fixed;
   bottom: calc(50% - 30px);
   margin: auto auto auto 30px;
   display: flex;
@@ -124,7 +120,7 @@ a img {
 
 .bottom {
   position: absolute;
-  margin: 0;
+  margin: auto auto 0 0;
   width: 100%;
 }
 
