@@ -29,7 +29,11 @@
               </select>
             </span>
             <form v-on:submit.prevent="addChat()">
-              <input id="input-content" type="text" placeholder="Enter your phone number" />
+              <input
+                id="input-content"
+                type="text"
+                placeholder="Enter your phone number"
+              />
             </form>
           </div>
           <button class="enter-btn" v-on:click="addChat()">
@@ -64,7 +68,9 @@ export default {
           this.printUserChat();
           this.printBotChat("Enter the received OTP on +1" + phoneNumber);
           document.querySelector("#area-code-container").remove();
-          document.querySelector("#input-content").setAttribute("placeholder", "Enter your OTP");
+          document
+            .querySelector("#input-content")
+            .setAttribute("placeholder", "Enter your OTP");
           step++;
         } else {
           this.printBotChat("Please enter your phone number again!");
@@ -74,7 +80,9 @@ export default {
         if (chatContent.length > 0) {
           this.printUserChat();
           this.printBotChat("Enter your name:");
-          document.querySelector("#input-content").setAttribute("placeholder", "Enter your name");
+          document
+            .querySelector("#input-content")
+            .setAttribute("placeholder", "Enter your name");
           step++;
         } else {
           this.printBotChat("You entered nothing!");
@@ -84,7 +92,9 @@ export default {
         if (name.length > 0) {
           this.printUserChat();
           this.printBotChat("Hi, " + name + "! Press Enter to proceed");
-          document.querySelector("#input-content").setAttribute("placeholder", "Press enter to proceed");
+          document
+            .querySelector("#input-content")
+            .setAttribute("placeholder", "Press enter to proceed");
           step++;
         } else {
           this.printBotChat("You entered nothing!");
@@ -101,7 +111,8 @@ export default {
       document.querySelector("#input-content").value = "";
     },
     printBotChat: function(content) {
-      document.querySelector("#chat-screen").innerHTML += "<p>" + content + "</p>";
+      document.querySelector("#chat-screen").innerHTML +=
+        "<p>" + content + "</p>";
     },
     updatePlaceHolder: function(content) {
       document.querySelector("#input-content").value(content);
