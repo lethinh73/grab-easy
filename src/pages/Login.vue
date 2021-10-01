@@ -111,6 +111,10 @@ export default {
 </script>
 
 <style scoped>
+.wrapper {
+  position: relative;
+}
+
 .view {
   position: absolute;
   width: 100%;
