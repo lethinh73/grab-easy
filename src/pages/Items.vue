@@ -6,13 +6,15 @@
     <input placeholder="Category Name" />
     <img src="../images/items-search.svg" />
   </form>
-  <div class="row mt-3 w-100">
-    <div
-      v-for="item in items"
-      :key="item.id"
-      class="col-6 p-2 d-flex justify-content-center"
-    >
-      <Item :item="item" />
+  <div class="container px-2 mt-3">
+    <div class="items-list m-0 row">
+      <div
+        v-for="item in items"
+        :key="item.id"
+        class="item-wrapper col-6 p-0 my-1 d-flex justify-content-center"
+      >
+        <Item :item="item" />
+      </div>
     </div>
   </div>
 </template>
@@ -88,6 +90,10 @@ form input {
 }
 ::placeholder {
   color: black;
+}
+.items-list {
+  overflow: scroll;
+  width: 100%;
 }
 @media (min-width: 768px) {
 }

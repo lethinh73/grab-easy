@@ -1,5 +1,5 @@
 <template>
-  <div class="wrapper card">
+  <div class="card">
     <img class=" card-img-top" :src="require('../images/' + item.image)" />
     <div class="card-body">
       <div class="card-title d-flex justify-content-between align-items-center">
@@ -12,6 +12,12 @@
           Customizable
         </p>
       </div>
+      <div v-if="item.customizable">
+        <img src="../images/items-group.svg" />
+      </div>
+      <div v-else>
+        <img src="../images/items-group.svg" />
+      </div>
     </div>
   </div>
 </template>
@@ -21,8 +27,9 @@ export default {
 };
 </script>
 <style scoped>
-.wrapper {
+.card {
   width: 95%;
+  border-radius: 10px;
 }
 .card-title img {
   height: 20px;
