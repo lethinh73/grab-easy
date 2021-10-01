@@ -159,7 +159,6 @@ a.nav-link {
   color: black;
   text-decoration: none;
 }
-
 div {
   background: white;
 }

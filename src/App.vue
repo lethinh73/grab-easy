@@ -23,18 +23,17 @@ export default {
   },
 };
 </script>
+
 <style>
 * {
   font-family: "Roboto", sans-serif;
   font-size: 12px;
 }
-
 body {
   margin: 0;
   display: flex;
   justify-content: center;
 }
-
 input {
   border: none;
 }
@@ -45,3 +44,5 @@ input {
   position: relative;
 }
 </style>
+
+

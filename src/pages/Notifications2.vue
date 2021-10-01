@@ -30,7 +30,6 @@ export default {
 }
 /*.logobox {
   margin-right: ;
-
 }*/
 .wait {
   font-family: "roboto";
@@ -68,7 +67,6 @@ export default {
   opacity: 1;
   margin-left: 5%;
 }
-
 .rowheight {
   height: 100%;
   top: 70px;
@@ -112,7 +110,6 @@ export default {
     height: fit-content;
   }
 }
-
 @media (min-width: 1200px) {
   .logobox {
     width: 160px;
