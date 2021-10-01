@@ -35,9 +35,6 @@ body {
   justify-content: center;
 }
 
-input {
-  border: none;
-}
 .wrapper {
   width: 100vw;
   height: 100vh;
