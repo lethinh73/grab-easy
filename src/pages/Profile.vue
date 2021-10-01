@@ -23,7 +23,9 @@
       <p>Terms and Conditions</p>
       <p>Privacy policy</p>
       <p>Version 1.43</p>
-      <Navbar class="nav" />
+      <div class="nav">
+        <Navbar />
+      </div>
     </div>
   </div>
 </template>
@@ -44,20 +46,20 @@ export default {
 
 <style scoped>
 .profile-container {
-  position: relative;
+  position: fixed;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
   width: 100%;
+  max-width: 420px;
   height: 100%;
-  border: 1px black solid;
+  min-height: 200px;
 }
 
 .top {
   position: relative;
   margin: 0 auto 30% 30px;
   width: fit-content;
-  border: 1px solid black;
 }
 
 .left-arrow {
@@ -81,7 +83,6 @@ export default {
   display: flex;
   flex-direction: column;
   justify-content: left;
-  border: 1px solid black;
 }
 
 .menu {
@@ -103,13 +104,15 @@ a img {
 }
 
 .bottom {
-  position: relative;
-  border: 1px solid black;
-  margin: auto 0 0 0;
+  position: absolute;
+  bottom: 0;
+  left: 0;
   width: 100%;
+  overflow: hidden;
 }
 
 .bottom p {
+  position: relative;
   margin-left: 30px;
 }
 
