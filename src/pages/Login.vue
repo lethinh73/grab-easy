@@ -50,7 +50,6 @@ import countryCodes from "../components/countryCodes.json";
 let step = 1;
 let phoneNumber = "";
 let name = "";
-
 export default {
   name: "Login",
   data: function() {
@@ -125,7 +124,6 @@ export default {
   align-items: center;
   /* border: 1px white solid; */
 }
-
 .logo.row {
   position: fixed;
   margin-top: 50px;
@@ -133,7 +131,6 @@ export default {
   text-align: center;
   /* border: 1px white solid; */
 }
-
 .middle.row {
   position: fixed;
   display: flex;
@@ -145,11 +142,9 @@ export default {
   scrollbar-width: none;
   bottom: 80px;
 }
-
 .middle.row::-webkit-scrollbar {
   display: none;
 }
-
 .bottom.row {
   width: 100%;
   height: fit-content;
@@ -157,12 +152,10 @@ export default {
   bottom: 30px;
   /* border: 1px white solid; */
 }
-
 .text.col {
   width: 500px;
   margin-left: calc(50% - 130px);
 }
-
 .input.col {
   display: flex;
   flex-direction: row;
@@ -170,7 +163,6 @@ export default {
   height: fit-content;
   margin-left: calc(50% - 130px);
 }
-
 #area-code {
   color: white;
   width: 50px;
@@ -178,7 +170,6 @@ export default {
   background-color: black;
   opacity: 0.5;
 }
-
 .input-box {
   display: flex;
   flex-direction: row;
@@ -190,11 +181,9 @@ export default {
   padding-left: 10px;
   height: fit-content;
 }
-
 form {
   width: 100%;
 }
-
 #input-content {
   background-color: black;
   color: white;
@@ -203,7 +192,6 @@ form {
   width: calc(100% - 15px);
   height: 40px;
 }
-
 .enter-btn {
   margin-left: 10px;
   border: none;
@@ -211,7 +199,6 @@ form {
   width: 40px;
   height: 40px;
 }
-
 .logo {
   width: 15rem;
   height: auto;
