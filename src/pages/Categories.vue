@@ -10,13 +10,15 @@
     <input placeholder="Category Name" />
     <img src="../images/items-search.svg" />
   </form> -->
-  <div class="row mt-3 w-100">
-    <div
-      v-for="item in items"
-      :key="item.id"
-      class="col-6 p-2 justify-content-center"
-    >
-      <Item :item="item" />
+  <div class="container m-0">
+    <div class="row m-0 ">
+      <div
+        v-for="item in items"
+        :key="item.id"
+        class="col-6 p-2 justify-content-center"
+      >
+        <Item :item="item" />
+      </div>
     </div>
   </div>
 </template>
@@ -62,6 +64,4 @@ export default {
   components: { Item },
 };
 </script>
-<style scoped>
-
-</style>
+<style scoped></style>

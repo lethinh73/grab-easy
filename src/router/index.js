@@ -1,4 +1,3 @@
-
 import { createRouter, createWebHistory } from "vue-router";
 import Login from "../pages/Login.vue";
 import Venue from "../pages/Venue.vue";
@@ -11,6 +10,7 @@ import Profile from "../pages/Profile.vue";
 import Offers2 from "../pages/Offers2.vue";
 import Notifications from "../pages/Notifications.vue";
 import Notifications2 from "../pages/Notifications2.vue";
+import Categories from "../pages/Categories.vue";
 
 const routes = [
   { path: "/", name: "Login", component: Login },
@@ -22,6 +22,7 @@ const routes = [
   { path: "/orderSuccess", name: "orderSuccess", component: orderSuccess },
   { path: "/profile", name: "Profile", component: Profile },
   { path: "/offers2", name: "Offers2", component: Offers2 },
+  { path: "/categories", name: "Categories", component: Categories },
   { path: "/notifications", name: "Notifications", component: Notifications },
   {
     path: "/notifications2",
