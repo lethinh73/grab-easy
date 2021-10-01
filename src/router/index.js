@@ -10,7 +10,8 @@ import Profile from "../pages/Profile.vue";
 import Offers2 from "../pages/Offers2.vue";
 import Notifications from "../pages/Notifications.vue";
 import Notifications2 from "../pages/Notifications2.vue";
-import Categories from "../pages/Categories.vue";
+
+import categories from "../pages/Categories.vue";
 
 const routes = [
   { path: "/", name: "Login", component: Login },
@@ -24,6 +25,7 @@ const routes = [
   { path: "/offers2", name: "Offers2", component: Offers2 },
   { path: "/categories", name: "Categories", component: Categories },
   { path: "/notifications", name: "Notifications", component: Notifications },
+  { path: "/categories", name: "Categories", component: categories},
   {
     path: "/notifications2",
     name: "Notifications2",
