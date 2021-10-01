@@ -24,7 +24,7 @@
       <p>Privacy policy</p>
       <p>Version 1.43</p>
       <div style="width: 100%">
-        <Navbar />
+        <Navbar class="nav" />
       </div>
     </div>
   </div>
@@ -45,36 +45,21 @@ export default {
 </script>
 
 <style scoped>
-/* * {
-  border: 1px solid black;
-} */
-
-/* body {
-  display: flex;
-  flex-flow: column;
-  flex-wrap: nowrap;
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  margin: 0;
-  padding: 0;
-} */
-
 .profile-container {
-  position: fixed;
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-
   width: 100%;
   height: 100%;
+  border: 1px black solid;
 }
 
 .top {
+  position: relative;
   margin: 0 auto auto 30px;
   width: fit-content;
+  border: 1px black solid;
 }
 
 .left-arrow {
@@ -98,6 +83,7 @@ export default {
   flex-direction: column;
   justify-content: left;
   width: fit-content;
+  border: 1px black solid;
 }
 
 .menu {
@@ -122,9 +108,16 @@ a img {
   position: absolute;
   margin: 0;
   width: 100%;
+  border: 1px black solid;
 }
 
 .bottom p {
   margin-left: 30px;
+}
+
+.nav {
+  position: relative;
+  width: 100%;
+  border: 1px black solid;
 }
 </style>
