@@ -122,6 +122,7 @@ export default {
     height: fit-content;
   }
 }
+
 @media (min-width: 300px) {
   .paragraph {
     width: 280px;
@@ -141,6 +142,7 @@ export default {
     height: fit-content;
   }
 }
+
 @media (min-width: 1200px) {
   .rowheight {
     width: 100%;

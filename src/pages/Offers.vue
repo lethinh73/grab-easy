@@ -1,18 +1,16 @@
 <template>
-  <div class="rowheight container">
-    <div class="Offers">
-      <h1 class="Offers">Offers</h1>
-    </div>
-    <div
-      class=" rowheight row justify-content-center d-flex align-items-center"
-    >
-      <div class="logobox col-4 col-lg-2 text-center">
+  <div class="rowheight">
+    <h1 class="Offers">Offers</h1>
+    <div class=" rowheight row">
+      <div class="logobox col text-center">
         <img class="logo" src="../images/Giftt@2x.png" alt="logo" />
         <p class="wait">Please wait, good things take time</p>
       </div>
     </div>
   </div>
-  <Navbar class="fixed-bottom" />
+  <div class="navbar">
+    <Navbar style="width: 100%" />
+  </div>
 </template>
 <script scoped>
 import Navbar from "../components/Navbar.vue";
@@ -22,12 +20,13 @@ export default {
 </script>
 <style scoped>
 .logo {
-  width: 100%;
+  width: 100px;
   height: auto;
 }
 .logobox {
-  margin-top: 10%;
-  width: auto;
+  top: calc(50% - 125px);
+  width: 100%;
+  position: absolute;
 }
 .wait {
   font-family: "roboto";
@@ -35,49 +34,29 @@ export default {
 }
 
 .Offers {
-  margin-top: 10vh;
-  top: 16px;
-  left: 30px;
-  width: 83px;
+  position: absolute;
+  margin-top: 30px;
+  left: calc(50% - 180px);
+  width: 100%;
   height: 39px;
   text-align: left;
-  font: normal normal bold 30px/36px Roboto;
+  font: normal normal bold 2rem Roboto;
   letter-spacing: -0.3px;
   color: #1a1824;
-  opacity: 1;
+  z-index: 1;
 }
 
 .rowheight {
   height: 100%;
-}
-@media (min-width: 300px) {
-  .Offers {
-    margin-top: 5%;
-  }
-}
-@media (min-width: 300px) {
-  .logo {
-    width: 130px;
-    height: auto;
-  }
-}
-@media (min-width: 702px) {
-  .logo {
-    width: 160px;
-    height: auto;
-  }
-}
-@media (min-width: 992px) {
-  .logo {
-    width: 160px;
-    height: auto;
-  }
+  width: 100%;
+  position: fixed;
+  left: calc(50% - 50vw);
 }
 
-@media (min-width: 1200px) {
-  .logo {
-    width: 160px;
-    height: auto;
-  }
+.navbar {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  padding: 0;
 }
 </style>

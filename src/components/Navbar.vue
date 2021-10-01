@@ -1,11 +1,12 @@
 <template>
   <div>
+    <!-- v-bind:style="{ width: widthSize }" -->
     <ul class="nav">
       <li class="nav-item" v-on:click="gotoPage('/venue')">
         <img src="../images/sydney-opera-house.svg" />
         <a class="nav-link" aria-current="page" href="#">HOME</a>
       </li>
-      <li class="nav-item" v-on:click="gotoPage('/items')">
+      <li class="nav-item" v-on:click="gotoPage('/venue')">
         <img src="../images/Glyph-Copy.svg" />
         <a class="nav-link" href="#">MY ORDERS</a>
       </li>
@@ -23,21 +24,36 @@
 <script>
 export default {
   name: "Navbar",
+  data() {
+    return {
+      widthSize: 0,
+    };
+  },
   methods: {
     gotoPage: function(destination) {
       this.$router.push(destination);
+    },
+    getWidthSize() {
+      this.widthSize = window.innerWidth;
     },
   },
 };
 </script>
 <style scoped>
+* {
+  box-sizing: border-box;
+}
 .nav {
   background: #f5f5f5;
   justify-content: center;
   padding: 10px 0;
   font-size: 0.6rem;
   flex-wrap: nowrap;
+  width: 100vw;
+  max-width: 420px;
+  height: 80px;
 }
+
 .nav-item {
   display: flex;
   flex-direction: column;
@@ -49,7 +65,7 @@ export default {
 .nav-item img {
   height: 20px;
 }
-@media (min-width: 768px) {
+/* @media (min-width: 768px) {
   .nav {
     font-size: 0.9rem;
   }
@@ -66,5 +82,5 @@ export default {
   .nav {
     padding: 20px 30px;
   }
-}
+} */
 </style>
