@@ -134,7 +134,6 @@ export default {
   /* position: absolute; */
   /* bottom: 150px; */
 }
-
 .map {
   height: 100vh;
 }
@@ -178,12 +177,10 @@ export default {
     bottom: 200px;
     font: normal normal bold 25px/22px Open Sans;
   }
-
   .myloc {
     width: 250px;
     position: absolute;
   }
-
   .ipt {
     position: absolute;
     width: 250px;
@@ -194,12 +191,10 @@ export default {
     font: normal normal bold 12px/17px Open Sans;
     border-radius: 0;
   }
-
   .map {
     height: 30vh;
   }
 }
-
 @media (max-width: 668px) and (min-width: 300px) {
   .btn {
     width: 100%;
@@ -213,14 +208,12 @@ export default {
     bottom: 200px;
     font: normal normal bold 25px/22px Open Sans;
   }
-
   .myloc {
     width: 300px;
     margin-top: 50px;
     position: absolute;
     bottom: 150px;
   }
-
   .ipt {
     margin-top: 50px;
     width: 300px;
@@ -229,7 +222,6 @@ export default {
     bottom: 107px;
   }
 }
-
 @media (max-width: 992px) and (min-width: 760px) {
   .btn {
     width: 100%;
@@ -238,20 +230,17 @@ export default {
     font: normal normal bold 24px/17px Open Sans;
     border-radius: 0;
   }
-
   .title {
     width: 600px;
     position: absolute;
     font: normal normal bold 35px/22px Open Sans;
   }
-
   .myloc {
     width: 600px;
     font: normal normal 600 20px/17px Open Sans;
     position: absolute;
     bottom: 160px;
   }
-
   .ipt {
     width: 600px;
     height: 60px;
@@ -260,7 +249,6 @@ export default {
     bottom: 80px;
   }
 }
-
 @media (max-width: 1200px) and (min-width: 993px) {
   .btn {
     width: 640px;
@@ -269,7 +257,6 @@ export default {
     border-radius: 10px;
     font: normal normal bold 18px/17px Open Sans;
   }
-
   .search {
     height: 300px;
   }
@@ -279,14 +266,12 @@ export default {
     bottom: 240px;
     font: normal normal bold 40px/22px Open Sans;
   }
-
   .myloc {
     width: 700px;
     font: normal normal 600 25px/17px Open Sans;
     position: absolute;
     bottom: 190px;
   }
-
   .ipt {
     width: 700px;
     height: 70px;

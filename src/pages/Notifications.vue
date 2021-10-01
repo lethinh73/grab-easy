@@ -35,7 +35,6 @@ export default {
   font-size: 16px;
   margin-top: 5%;
 }
-
 .Offers {
   margin-top: 10vh;
   top: 16px;
@@ -48,7 +47,6 @@ export default {
   color: #1a1824;
   opacity: 1;
 }
-
 .rowheight {
   height: 100%;
 }
@@ -75,7 +73,6 @@ export default {
     height: auto;
   }
 }
-
 @media (min-width: 1200px) {
   .logo {
     width: 160px;

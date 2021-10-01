@@ -23,21 +23,29 @@ export default {
   },
 };
 </script>
+
 <style>
 * {
   font-family: "Roboto", sans-serif;
   font-size: 12px;
 }
-
 body {
   margin: 0;
   display: flex;
   justify-content: center;
 }
+<<<<<<< HEAD
 
+=======
+input {
+  border: none;
+}
+>>>>>>> main
 .wrapper {
   width: 100vw;
   height: 100vh;
   max-width: 420px;
 }
 </style>
+
+
