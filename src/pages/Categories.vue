@@ -1,24 +1,19 @@
 <template>
-  <div class="header-img w-100">
+  <div class="arrow">
     <img
-      class="img-fluid w-100"
       src="../images/back.svg"
-      style="width: 17px; height: 15px; left: 20px"
+      style="width: 17px; height: 15px; opacity: 1"
     />
+    <div class="name">Categories</div>
   </div>
-  <!-- <form class="items-form py-3 px-4">
-    <input placeholder="Category Name" />
-    <img src="../images/items-search.svg" />
-  </form> -->
-  <div class="container m-0">
-    <div class="row m-0 ">
-      <div
-        v-for="item in items"
-        :key="item.id"
-        class="col-6 p-2 justify-content-center"
-      >
-        <Item :item="item" />
-      </div>
+
+  <div class="row m-0 mt-4 w-100">
+    <div
+      v-for="item in items"
+      :key="item.id"
+      class="col-6 p-0 m-0 d-flex justify-content-center"
+    >
+      <Item :item="item" />
     </div>
   </div>
 </template>
@@ -30,33 +25,43 @@ export default {
       items: [
         {
           id: 1,
-          name: "Item name",
+          name: "Nutty Concepts",
           image: "item1.png",
         },
         {
           id: 2,
-          name: "Item name",
+          name: "Chocolate Concepts",
           image: "item2.png",
         },
         {
           id: 3,
-          name: "Item name",
+          name: "Fresh Fruit Concepts",
           image: "item3.png",
         },
         {
           id: 4,
-          name: "Item name",
+          name: "Diet Concepts",
           image: "item4.png",
         },
         {
           id: 5,
-          name: "Item name",
+          name: "Summer Specials",
           image: "item5.png",
         },
         {
           id: 6,
-          name: "Item name",
+          name: "Kids Concepts",
           image: "item6.png",
+        },
+        {
+          id: 7,
+          name: "Cream Stone Icecream",
+          image: "item7.png",
+        },
+        {
+          id: 8,
+          name: "Nice Pie",
+          image: "item8.png",
         },
       ],
     };
@@ -64,4 +69,23 @@ export default {
   components: { Item },
 };
 </script>
-<style scoped></style>
+
+
+<style scoped>
+.arrow {
+  width: fit-content;
+  padding-left: 20px;
+  padding-top: 10px;
+}
+
+.name {
+  padding-top: 10px;
+  width: 125px;
+  height: 21px;
+  text-align: left;
+  font: normal normal bold 16px/21px Roboto;
+  letter-spacing: 0.13px;
+  color: #0a1f44;
+  opacity: 1;
+}
+</style>
