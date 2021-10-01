@@ -83,7 +83,6 @@ export default {
   data() {
     return {
       count: 1,
-      item: this.props.item,
     };
   },
 };
