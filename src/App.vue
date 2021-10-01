@@ -34,18 +34,12 @@ body {
   display: flex;
   justify-content: center;
 }
-<<<<<<< HEAD
-
-=======
 input {
   border: none;
 }
->>>>>>> main
 .wrapper {
   width: 100vw;
   height: 100vh;
   max-width: 420px;
 }
 </style>
-
-
