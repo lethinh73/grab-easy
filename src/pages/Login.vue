@@ -127,11 +127,11 @@ export default {
   margin: 50px 0 auto 0;
   width: 100%;
   text-align: center;
-  border: 1px solid red;
 }
 .middle.row {
   position: relative;
-  align-items: center;
+  min-height: 200px;
+  justify-content: flex-start;
   margin: auto 0 0px 0;
   display: flex;
   flex-direction: column-reverse;

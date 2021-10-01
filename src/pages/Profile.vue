@@ -19,13 +19,11 @@
       </span>
     </div>
 
-    <div class="bottom fixed-bottom">
+    <div class="bottom">
       <p>Terms and Conditions</p>
       <p>Privacy policy</p>
       <p>Version 1.43</p>
-      <div style="width: 100%">
-        <Navbar class="nav" />
-      </div>
+      <Navbar class="nav" />
     </div>
   </div>
 </template>
@@ -57,9 +55,9 @@ export default {
 
 .top {
   position: relative;
-  margin: 0 auto auto 30px;
+  margin: 0 auto 30% 30px;
   width: fit-content;
-  border: 1px black solid;
+  border: 1px solid black;
 }
 
 .left-arrow {
@@ -76,14 +74,14 @@ export default {
 }
 
 .middle {
-  position: absolute;
-  bottom: calc(50% - 30px);
-  margin: auto auto auto 30px;
+  position: relative;
+  margin: 0 auto auto 30px;
+  height: fit-content;
+  width: fit-content;
   display: flex;
   flex-direction: column;
   justify-content: left;
-  width: fit-content;
-  border: 1px black solid;
+  border: 1px solid black;
 }
 
 .menu {
@@ -91,11 +89,11 @@ export default {
   text-align: left;
   padding-left: 0;
   width: fit-content;
-  margin: 0 auto 10px 0;
+  margin: 0 auto 0 0;
 }
 
 .social-btn-group {
-  margin: 20px auto 10px 0;
+  margin: 10px auto 10px 0;
 }
 
 a img {
@@ -105,10 +103,10 @@ a img {
 }
 
 .bottom {
-  position: absolute;
-  margin: 0;
+  position: relative;
+  border: 1px solid black;
+  margin: auto 0 0 0;
   width: 100%;
-  border: 1px black solid;
 }
 
 .bottom p {
@@ -118,6 +116,5 @@ a img {
 .nav {
   position: relative;
   width: 100%;
-  border: 1px black solid;
 }
 </style>
