@@ -1,18 +1,16 @@
 <template>
-  <div class="rowheight container">
-    <div class="Offers">
-      <h1 class="Offers">Notifications</h1>
-    </div>
-    <div
-      class=" rowheight row justify-content-center d-flex align-items-center"
-    >
-      <div class="logobox col-4 text-center">
+  <div class="container">
+    <h1 class="offers">Notifications</h1>
+    <div class=" rowheight row">
+      <div class="logobox col text-center">
         <img class="logo" src="../images/notif@2x.png" alt="logo" />
         <p class="wait">You don't have any notifications yet.</p>
       </div>
+      <div class="navbar">
+        <Navbar />
+      </div>
     </div>
   </div>
-  <Navbar class="fixed-bottom" />
 </template>
 <script scoped>
 import Navbar from "../components/Navbar.vue";
@@ -21,62 +19,46 @@ export default {
 };
 </script>
 <style scoped>
-.logo {
+.container {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   width: 100%;
+  max-width: 420px;
+  height: 100%;
+}
+
+.logo {
+  width: 100px;
   height: auto;
 }
 .logobox {
-  top: calc(50vh - 125px);
   width: 100%;
-  position: fixed;
+  position: relative;
 }
 .wait {
   font-family: "roboto";
   font-size: 16px;
-  margin-top: 5%;
 }
-.Offers {
-  margin-top: 10vh;
-  top: 16px;
+
+.offers {
+  position: absolute;
+  top: 30px;
   left: 30px;
-  width: 83px;
-  height: 39px;
+  width: 100%;
+  height: 40px;
   text-align: left;
-  font: normal normal bold 1.8rem Roboto;
+  font: normal normal bold 2rem Roboto;
   letter-spacing: -0.3px;
   color: #1a1824;
-  opacity: 1;
 }
-.rowheight {
-  height: 100%;
-}
-@media (min-width: 300px) {
-  .Offers {
-    margin-top: 5%;
-  }
-}
-@media (min-width: 300px) {
-  .logo {
-    width: 130px;
-    height: auto;
-  }
-}
-@media (min-width: 702px) {
-  .logo {
-    width: 160px;
-    height: auto;
-  }
-}
-@media (min-width: 992px) {
-  .logo {
-    width: 160px;
-    height: auto;
-  }
-}
-@media (min-width: 1200px) {
-  .logo {
-    width: 160px;
-    height: auto;
-  }
+
+.navbar {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  overflow: hidden;
+  padding: 0;
 }
 </style>

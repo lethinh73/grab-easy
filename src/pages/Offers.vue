@@ -1,15 +1,15 @@
 <template>
-  <div class="rowheight">
-    <h1 class="Offers">Offers</h1>
+  <div class="container">
+    <h1 class="offers">Offers</h1>
     <div class=" rowheight row">
       <div class="logobox col text-center">
         <img class="logo" src="../images/Giftt@2x.png" alt="logo" />
         <p class="wait">Please wait, good things take time</p>
       </div>
+      <div class="navbar">
+        <Navbar />
+      </div>
     </div>
-  </div>
-  <div class="navbar">
-    <Navbar style="width: 100%" />
   </div>
 </template>
 <script scoped>
@@ -19,44 +19,46 @@ export default {
 };
 </script>
 <style scoped>
+.container {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  max-width: 420px;
+  height: 100%;
+}
+
 .logo {
   width: 100px;
   height: auto;
 }
 .logobox {
-  top: calc(50% - 125px);
   width: 100%;
-  position: absolute;
+  position: relative;
 }
 .wait {
   font-family: "roboto";
   font-size: 16px;
 }
 
-.Offers {
+.offers {
   position: absolute;
-  margin-top: 30px;
-  left: calc(50% - 180px);
+  top: 30px;
+  left: 30px;
   width: 100%;
-  height: 39px;
+  height: 40px;
   text-align: left;
   font: normal normal bold 2rem Roboto;
   letter-spacing: -0.3px;
   color: #1a1824;
-  z-index: 1;
-}
-
-.rowheight {
-  height: 100%;
-  width: 100%;
-  position: fixed;
-  left: calc(50% - 50vw);
 }
 
 .navbar {
-  position: fixed;
-  bottom: 0;
+  position: absolute;
   width: 100%;
+  bottom: 0;
+  overflow: hidden;
   padding: 0;
 }
 </style>

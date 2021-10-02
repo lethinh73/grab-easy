@@ -29,11 +29,7 @@
               </select>
             </span>
             <form v-on:submit.prevent="addChat()">
-              <input
-                id="input-content"
-                type="text"
-                placeholder="Enter your phone number"
-              />
+              <input id="input-content" type="text" placeholder="Enter your phone number" />
             </form>
           </div>
           <button class="enter-btn" v-on:click="addChat()">
@@ -67,9 +63,7 @@ export default {
           this.printUserChat();
           this.printBotChat("Enter the received OTP on +1" + phoneNumber);
           document.querySelector("#area-code-container").remove();
-          document
-            .querySelector("#input-content")
-            .setAttribute("placeholder", "Enter your OTP");
+          document.querySelector("#input-content").setAttribute("placeholder", "Enter your OTP");
           step++;
         } else {
           this.printBotChat("Please enter your phone number again!");
@@ -79,9 +73,7 @@ export default {
         if (chatContent.length > 0) {
           this.printUserChat();
           this.printBotChat("Enter your name:");
-          document
-            .querySelector("#input-content")
-            .setAttribute("placeholder", "Enter your name");
+          document.querySelector("#input-content").setAttribute("placeholder", "Enter your name");
           step++;
         } else {
           this.printBotChat("You entered nothing!");
@@ -91,9 +83,7 @@ export default {
         if (name.length > 0) {
           this.printUserChat();
           this.printBotChat("Hi, " + name + "! Press Enter to proceed");
-          document
-            .querySelector("#input-content")
-            .setAttribute("placeholder", "Press enter to proceed");
+          document.querySelector("#input-content").setAttribute("placeholder", "Press enter to proceed");
           step++;
         } else {
           this.printBotChat("You entered nothing!");
@@ -110,8 +100,7 @@ export default {
       document.querySelector("#input-content").value = "";
     },
     printBotChat: function(content) {
-      document.querySelector("#chat-screen").innerHTML +=
-        "<p>" + content + "</p>";
+      document.querySelector("#chat-screen").innerHTML += "<p>" + content + "</p>";
     },
     updatePlaceHolder: function(content) {
       document.querySelector("#input-content").value(content);
@@ -122,57 +111,57 @@ export default {
 
 <style scoped>
 .view {
-  position: absolute;
+  position: fixed;
   width: 100%;
-  height: 100vh;
-  min-height: 640px;
+  max-width: 420px;
+  height: 100%;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
   color: white;
   margin: 0;
+  padding: 0;
   background-color: black;
-  align-items: center;
-  /* border: 1px white solid; */
 }
 .logo.row {
-  position: fixed;
-  margin-top: 50px;
+  position: relative;
+  margin: 100px 0 auto 0;
   width: 100%;
   text-align: center;
-  /* border: 1px white solid; */
 }
 .middle.row {
-  position: fixed;
+  position: relative;
+  min-height: 200px;
+  justify-content: flex-start;
+  margin: auto 0 0px 0;
   display: flex;
   flex-direction: column-reverse;
   width: 100%;
-  max-height: 50%;
   overflow: auto;
   -ms-overflow-style: none;
   scrollbar-width: none;
-  bottom: 80px;
 }
 .middle.row::-webkit-scrollbar {
   display: none;
 }
 .bottom.row {
+  position: relative;
+  margin: 0 0 30px 0;
+  display: flex;
+  align-items: center;
   width: 100%;
-  height: fit-content;
-  position: fixed;
-  bottom: 30px;
-  /* border: 1px white solid; */
+  height: 50px;
 }
 .text.col {
   width: 500px;
-  margin-left: calc(50% - 130px);
+  margin-left: calc(50% - 120px);
 }
 .input.col {
   display: flex;
   flex-direction: row;
   width: 500px;
   height: fit-content;
-  margin-left: calc(50% - 130px);
+  margin-left: calc(50% - 140px);
 }
 #area-code {
   color: white;
