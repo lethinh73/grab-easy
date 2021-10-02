@@ -111,8 +111,9 @@ export default {
 
 <style scoped>
 .view {
-  position: relative;
+  position: fixed;
   width: 100%;
+  max-width: 420px;
   height: 100%;
   box-sizing: border-box;
   display: flex;
@@ -124,7 +125,7 @@ export default {
 }
 .logo.row {
   position: relative;
-  margin: 50px 0 auto 0;
+  margin: 100px 0 auto 0;
   width: 100%;
   text-align: center;
 }

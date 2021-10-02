@@ -8,12 +8,17 @@
     </div>
 
     <div class="middle">
-      <button class="btn menu">Notifications</button>
-      <button class="btn menu">Log out</button>
+      <button
+        class="btn menu"
+        v-on:click="gotoPage('/notifications')"
+        style="display: flex; flex-direction: row; align-items: center"
+      >
+        Notifications
+        <div class="num-notification">5</div>
+      </button>
+      <button class="btn menu" v-on:click="gotoPage('/')">Log out</button>
       <span class="social-btn-group">
-        <a href="http://www.facebook.com" v-on:click="gotoPage()"
-          ><img src="../images/profile/facebook.svg" alt="facebook"
-        /></a>
+        <a href="http://www.facebook.com"><img src="../images/profile/facebook.svg" alt="facebook"/></a>
         <a href="http://www.instagram.com"><img src="../images/profile/instagram.svg" alt="instagram"/></a>
         <a href="#"><img src="../images/profile/globe.svg" alt="globe"/></a>
       </span>
@@ -40,6 +45,9 @@ export default {
     goBack: function() {
       window.history.back();
     },
+    gotoPage: function(destination) {
+      this.$router.push(destination);
+    },
   },
 };
 </script>
@@ -58,7 +66,7 @@ export default {
 
 .top {
   position: relative;
-  margin: 0 auto 30% 30px;
+  margin: 30px auto 30% 30px;
   width: fit-content;
 }
 
@@ -91,6 +99,28 @@ export default {
   padding-left: 0;
   width: fit-content;
   margin: 0 auto 0 0;
+}
+
+.btn:hover {
+  color: gray;
+}
+
+a:hover {
+  background-color: gray;
+}
+
+.num-notification {
+  position: relative;
+  margin-left: 10px;
+  width: 25px;
+  height: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  color: white;
+  background-color: red;
+  border-radius: 100%;
 }
 
 .social-btn-group {
