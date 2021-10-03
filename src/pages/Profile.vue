@@ -66,7 +66,7 @@ export default {
 
 .top {
   position: relative;
-  margin: 30px auto 30% 30px;
+  margin: 20px auto 30% 30px;
   width: fit-content;
 }
 
@@ -80,7 +80,8 @@ export default {
 }
 
 .greeting {
-  font-size: 30px;
+  font-size: 2rem;
+  font-weight: bold;
 }
 
 .middle {

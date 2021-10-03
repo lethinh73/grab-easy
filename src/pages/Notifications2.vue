@@ -2,7 +2,7 @@
   <div class="container">
     <h1 class="offers">
       <button class="btn left-arrow" style="padding-left: 0" v-on:click="goBack()">
-        <i class="fas fa-arrow-left" style="font-size: 25px"></i>
+        <i class="fas fa-arrow-left" style="font-size: 30px"></i>
       </button>
     </h1>
     <h1 class="offers">Notifications</h1>
