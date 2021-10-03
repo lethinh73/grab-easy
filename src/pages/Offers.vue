@@ -38,7 +38,7 @@ export default {
   position: relative;
 }
 .wait {
-  font-family: "roboto";
+  font-family: "Roboto", sans-serif;
   font-size: 16px;
 }
 
