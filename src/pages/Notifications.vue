@@ -1,10 +1,10 @@
 <template>
   <div class="container">
     <h1 class="offers">Notifications</h1>
-    <div class=" rowheight row">
+    <div class="row">
       <div class="logobox col text-center">
         <img class="logo" src="../images/notif@2x.png" alt="logo" />
-        <p class="wait">You don't have any notifications yet.</p>
+        <p class="nothing">You don't have any notifications yet.</p>
       </div>
       <div class="navbar">
         <Navbar />
@@ -37,7 +37,7 @@ export default {
   width: 100%;
   position: relative;
 }
-.wait {
+.nothing {
   font-family: "roboto";
   font-size: 16px;
 }
