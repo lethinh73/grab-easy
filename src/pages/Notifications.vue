@@ -55,7 +55,7 @@ export default {
   height: auto;
 }
 .logobox {
-  margin-top: 60%;
+  margin-top: calc(50vh - 200px);
   width: 100%;
   position: absolute;
 }
