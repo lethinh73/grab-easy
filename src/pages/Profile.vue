@@ -106,10 +106,6 @@ export default {
   color: gray;
 }
 
-a:hover {
-  background-color: gray;
-}
-
 .num-notification {
   position: relative;
   margin-left: 10px;

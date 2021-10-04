@@ -2,6 +2,46 @@
   <div class="container">
     <h1 class="greeting">My order</h1>
     <hr />
+    <div class="order-container">
+      <ul class="nav nav-pills nav-justified" id="pills-tab" role="tablist">
+        <li class="nav-item" role="presentation">
+          <button
+            class="nav-link switch-button active"
+            id="ongoing-order-tab"
+            data-bs-toggle="pill"
+            data-bs-target="#ongoing-order"
+            type="button"
+            role="tab"
+            aria-controls="ongoing-order"
+            aria-selected="true"
+          >
+            On going
+          </button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button
+            class="nav-link switch-button"
+            id="past-order-tab"
+            data-bs-toggle="pill"
+            data-bs-target="#past-order"
+            type="button"
+            role="tab"
+            aria-controls="past-order"
+            aria-selected="false"
+          >
+            Past
+          </button>
+        </li>
+      </ul>
+      <div class="tab-content" id="pills-tabContent">
+        <div class="tab-pane fade show active" id="ongoing-order" role="tabpanel" aria-labelledby="pills-home-tab">
+          Ongoing order!
+        </div>
+        <div class="tab-pane fade" id="past-order" role="tabpanel" aria-labelledby="pills-profile-tab">
+          Past order!
+        </div>
+      </div>
+    </div>
     <div class="navbar">
       <Navbar />
     </div>
@@ -41,6 +81,56 @@ export default {
   font: normal normal bold 2rem Roboto;
   letter-spacing: -0.3px;
   color: #1a1824;
+}
+
+.order-container {
+  position: relative;
+  margin-top: 30px;
+  height: 100%;
+}
+
+ul.nav-pills {
+  border: 1px solid black;
+  border-radius: 20px;
+}
+
+.switch-button {
+  box-shadow: inset 0px 0px 15px 3px #ffffff;
+  background: #ffffff 0% 0% no-repeat padding-box;
+  border-radius: 20px;
+  display: inline-block;
+  cursor: pointer;
+  color: #b8bbc6;
+  font-size: 15px;
+  padding: 6px 13px;
+  text-decoration: none;
+}
+
+.nav-link.active {
+  box-shadow: inset 0px 0px 15px 3px #511401;
+  background: #511401 0% 0% no-repeat padding-box;
+  border: none;
+  color: #ffffff;
+}
+
+.tab-content {
+  margin-top: 20px;
+  height: 100%;
+}
+
+.tab-pane {
+  position: relative;
+  height: 100px;
+}
+
+#ongoing-order {
+  position: relative;
+  height: 100%;
+}
+
+#past-order {
+  position: relative;
+  height: 100%;
 }
 
 .navbar {
