@@ -37,7 +37,7 @@
         <div class="tab-pane fade show active" id="ongoing-order" role="tabpanel" aria-labelledby="ongoing-order-tab">
           <img src="../images/myorders/ongoing.svg" style="width: 200px; height: 200px;" alt="ongoing" />
           <h3>Order now for your orders to appear here.</h3>
-          <div class="card w-90">
+          <!-- <div class="card w-90">
             <div class="row">
               <div class="col-3">
                 <img src="../images/myorders/pizza.png" style="width: 90px; height: auto;" alt="pizza" />
@@ -45,10 +45,10 @@
               <div class="col-9">
                 <h3>The Pizza Place</h3>
                 <p>Ordered Time : 20:36 | Order ID : 3456 Items : Cheese Garlic Bread</p>
-                <button class="btn-status">Status</button>
+                <button class="btn-status"><img src="" alt="status" /></button>
               </div>
             </div>
-          </div>
+          </div> -->
         </div>
         <div class="tab-pane fade" id="past-order" role="tabpanel" aria-labelledby="past-order-tab">
           <img src="../images/myorders/past.svg" style="width: 200px; height: 200px;" alt="ongoing" />
