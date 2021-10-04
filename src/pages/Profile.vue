@@ -8,22 +8,27 @@
     </div>
 
     <div class="middle">
-      <button class="btn menu">Notifications</button>
-      <button class="btn menu">Log out</button>
+      <button
+        class="btn menu"
+        v-on:click="gotoPage('/notifications')"
+        style="display: flex; flex-direction: row; align-items: center"
+      >
+        Notifications
+        <div class="num-notification">5</div>
+      </button>
+      <button class="btn menu" v-on:click="gotoPage('/')">Log out</button>
       <span class="social-btn-group">
-        <a href="http://www.facebook.com" v-on:click="gotoPage()"
-          ><img src="../images/profile/facebook.svg" alt="facebook"
-        /></a>
+        <a href="http://www.facebook.com"><img src="../images/profile/facebook.svg" alt="facebook"/></a>
         <a href="http://www.instagram.com"><img src="../images/profile/instagram.svg" alt="instagram"/></a>
         <a href="#"><img src="../images/profile/globe.svg" alt="globe"/></a>
       </span>
     </div>
 
-    <div class="bottom fixed-bottom">
+    <div class="bottom">
       <p>Terms and Conditions</p>
       <p>Privacy policy</p>
       <p>Version 1.43</p>
-      <div style="width: 100%">
+      <div class="nav">
         <Navbar />
       </div>
     </div>
@@ -40,40 +45,28 @@ export default {
     goBack: function() {
       window.history.back();
     },
+    gotoPage: function(destination) {
+      this.$router.push(destination);
+    },
   },
 };
 </script>
 
 <style scoped>
-/* * {
-  border: 1px solid black;
-} */
-
-/* body {
-  display: flex;
-  flex-flow: column;
-  flex-wrap: nowrap;
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  margin: 0;
-  padding: 0;
-} */
-
 .profile-container {
   position: fixed;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-
+  justify-content: center;
   width: 100%;
+  max-width: 420px;
   height: 100%;
+  min-height: 200px;
 }
 
 .top {
-  margin: 0 auto auto 30px;
+  position: relative;
+  margin: 20px auto 30% 30px;
   width: fit-content;
 }
 
@@ -87,17 +80,18 @@ export default {
 }
 
 .greeting {
-  font-size: 30px;
+  font-size: 2rem;
+  font-weight: bold;
 }
 
 .middle {
-  position: absolute;
-  bottom: calc(50% - 30px);
-  margin: auto auto auto 30px;
+  position: relative;
+  margin: 0 auto auto 30px;
+  height: fit-content;
+  width: fit-content;
   display: flex;
   flex-direction: column;
   justify-content: left;
-  width: fit-content;
 }
 
 .menu {
@@ -105,11 +99,29 @@ export default {
   text-align: left;
   padding-left: 0;
   width: fit-content;
-  margin: 0 auto 10px 0;
+  margin: 0 auto 0 0;
+}
+
+.btn:hover {
+  color: gray;
+}
+
+.num-notification {
+  position: relative;
+  margin-left: 10px;
+  width: 25px;
+  height: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  color: white;
+  background-color: red;
+  border-radius: 100%;
 }
 
 .social-btn-group {
-  margin: 20px auto 10px 0;
+  margin: 10px auto 10px 0;
 }
 
 a img {
@@ -120,11 +132,19 @@ a img {
 
 .bottom {
   position: absolute;
-  margin: 0;
+  bottom: 0;
+  left: 0;
   width: 100%;
+  overflow: hidden;
 }
 
 .bottom p {
+  position: relative;
   margin-left: 30px;
+}
+
+.nav {
+  position: relative;
+  width: 100%;
 }
 </style>
