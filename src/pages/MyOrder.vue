@@ -34,11 +34,13 @@
         </li>
       </ul>
       <div class="tab-content" id="pills-tabContent">
-        <div class="tab-pane fade show active" id="ongoing-order" role="tabpanel" aria-labelledby="pills-home-tab">
-          Ongoing order!
+        <div class="tab-pane fade show active" id="ongoing-order" role="tabpanel" aria-labelledby="ongoing-order-tab">
+          <img src="../images/myorders/ongoing.svg" style="width: 200px; height: 200px;" alt="ongoing" />
+          <h3>Order now for your orders to appear here.</h3>
         </div>
-        <div class="tab-pane fade" id="past-order" role="tabpanel" aria-labelledby="pills-profile-tab">
-          Past order!
+        <div class="tab-pane fade" id="past-order" role="tabpanel" aria-labelledby="past-order-tab">
+          <img src="../images/myorders/past.svg" style="width: 200px; height: 200px;" alt="ongoing" />
+          <h3>Oops! Your past looks empty.</h3>
         </div>
       </div>
     </div>
@@ -119,18 +121,11 @@ ul.nav-pills {
 }
 
 .tab-pane {
-  position: relative;
-  height: 100px;
-}
-
-#ongoing-order {
-  position: relative;
-  height: 100%;
-}
-
-#past-order {
-  position: relative;
-  height: 100%;
+  height: 80%;
+  position: absolute;
+  padding-top: 15%;
+  width: 100%;
+  text-align: center;
 }
 
 .navbar {
