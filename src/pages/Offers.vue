@@ -3,7 +3,7 @@
     <h1 class="offers">Offers</h1>
     <div class=" rowheight row">
       <div class="logobox col text-center">
-        <img class="logo" src="../images/Giftt@2x.png" alt="logo" />
+        <img class="logo" src="../images/Giftt@2x.png" alt="logo" v-on:click="gotoPage('/offers2')" />
         <p class="wait">Please wait, good things take time</p>
       </div>
       <div class="navbar">
@@ -16,6 +16,11 @@
 import Navbar from "../components/Navbar.vue";
 export default {
   components: { Navbar },
+  methods: {
+    gotoPage: function(destination) {
+      this.$router.push(destination);
+    },
+  },
 };
 </script>
 <style scoped>
