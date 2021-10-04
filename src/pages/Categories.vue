@@ -6,6 +6,7 @@
     />
     <div class="name">Categories</div>
   </div>
+
   <div class="row m-0 mt-4 w-100">
     <div
       v-for="item in items"
@@ -68,6 +69,8 @@ export default {
   components: { Item },
 };
 </script>
+
+
 <style scoped>
 .arrow {
   width: fit-content;
