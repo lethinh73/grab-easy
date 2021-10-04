@@ -8,12 +8,12 @@
           src="../images/exclaimation.svg"
           type="button"
           data-bs-toggle="modal"
-          data-bs-target="#item-description"
+          :data-bs-target="`#item${item.id}`"
         />
       </div>
       <div
         class="modal fade"
-        id="item-description"
+        :id="`item${item.id}`"
         tabindex="-1"
         aria-labelledby="exampleModalLabel"
         aria-hidden="true"
