@@ -45,9 +45,7 @@
             <h3>Order now for your orders to appear here.</h3>
           </div>
           <div v-else>
-            <FoodCard />
-            <FoodCard />
-            <FoodCard />
+            <FoodCard :txt="Wow" />
           </div>
         </div>
         <div class="tab-pane fade" id="past-order" role="tabpanel" aria-labelledby="past-order-tab">
@@ -73,7 +71,7 @@
 </template>
 <script scoped>
 import Navbar from "../components/Navbar.vue";
-import FoodCard from "../components/myorders/FoodCard.vue";
+import FoodCard from "../components/FoodCard.vue";
 
 export default {
   components: { Navbar, FoodCard },

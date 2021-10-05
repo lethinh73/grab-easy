@@ -2,26 +2,25 @@
   <div class="card w-90">
     <div class="row">
       <div class="col-3">
-        <img src="../../images/myorders/pizza.png" style="width: 90px; height: auto;" alt="pizza" />
+        <img src="../images/myorders/pizza.png" style="width: 90px; height: auto;" alt="pizza" />
       </div>
       <div class="col-9">
         <h3>The Pizza Place</h3>
         <p>Ordered Time : 20:36 | Order ID : 3456 | Items : Cheese Garlic Bread</p>
         <button v-on:click="toggleInformation()">
-          <img src="../../images/myorders/status.svg" alt="status" />
+          <img src="../images/myorders/status.svg" alt="status" />
         </button>
       </div>
     </div>
   </div>
-  <div class="card w-90 hide toggleItem">
-    TESTING!!!
-  </div>
+  <div class="card w-90 hide toggleItem"></div>
 </template>
 
 <script>
 let toggle = false;
 
 export default {
+  props: { txt: String },
   methods: {
     toggleInformation: function() {
       if (toggle) {
@@ -32,6 +31,9 @@ export default {
 
       toggle = !toggle;
     },
+  },
+  data() {
+    console.log(this.txt);
   },
 };
 </script>
