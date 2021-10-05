@@ -13,27 +13,30 @@
       </div>
     </div>
   </div>
-  <div class="card w-90 hide toggleItem"></div>
+  <div class="card w-90 toggleItem hide" v-bind="{ id }">
+    <span
+      ><input type="radio" name="" id=""/> {{ txt }}
+      <button v-on:click="toggleInformation()">
+        <img src="../images/myorders/confirmed.svg" alt="status" /></button
+    ></span>
+  </div>
 </template>
 
 <script>
 let toggle = false;
 
 export default {
-  props: { txt: String },
+  props: ["txt", "id"],
   methods: {
     toggleInformation: function() {
       if (toggle) {
-        document.querySelector(".toggleItem").classList.add("hide");
+        document.querySelector("#" + this.id).classList.add("hide");
       } else {
-        document.querySelector(".toggleItem").classList.remove("hide");
+        document.querySelector("#" + this.id).classList.remove("hide");
       }
 
       toggle = !toggle;
     },
-  },
-  data() {
-    console.log(this.txt);
   },
 };
 </script>
@@ -50,7 +53,8 @@ export default {
   flex-direction: column;
   align-items: left;
   justify-content: center;
-  margin-bottom: 30px;
+  margin-bottom: 0;
+  margin-top: 20px;
   font-size: 16px;
 }
 
@@ -63,6 +67,12 @@ export default {
   width: fit-content;
   height: fit-content;
   background: transparent;
+}
+
+.toggleItem {
+  margin-top: -8px;
+  border-radius: 0 0 16px 16px;
+  z-index: -1;
 }
 
 .hide {

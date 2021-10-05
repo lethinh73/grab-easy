@@ -45,7 +45,9 @@
             <h3>Order now for your orders to appear here.</h3>
           </div>
           <div v-else>
-            <FoodCard :txt="Wow" />
+            <FoodCard txt="Cheese Garlic Bread" id="pizza" />
+            <FoodCard txt="Shit" id="pizza" />
+            <FoodCard txt="Yesser" id="pizza" />
           </div>
         </div>
         <div class="tab-pane fade" id="past-order" role="tabpanel" aria-labelledby="past-order-tab">
@@ -59,7 +61,7 @@
             <h3>Oops! Your past looks empty.</h3>
           </div>
           <div v-else>
-            <FoodCard />
+            <FoodCard txt="TESTING" id="num1" />
           </div>
         </div>
       </div>
