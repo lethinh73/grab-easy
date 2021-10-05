@@ -3,7 +3,7 @@
     <div class="modal-content d-flex ">
       <div class="modal-body px-3 py-5 d-flex flex-column align-items-center">
         <div class="container p-0 d-flex">
-          <img class="item-img" src="../images/Bread.png" />
+          <img class="item-img" :src="require('../images/' + item.image)" />
           <div class="container">
             <p class="fw-bold mt-2 mb-1">{{ item.name }}</p>
             <p class="item-description mb-1">
@@ -28,6 +28,9 @@
 export default {
   name: "Description",
   props: ["item"],
+  mounted() {
+    console.log(this.item);
+  },
 };
 </script>
 
