@@ -35,24 +35,34 @@
       </ul>
       <div class="tab-content" id="pills-tabContent">
         <div class="tab-pane fade show active" id="ongoing-order" role="tabpanel" aria-labelledby="ongoing-order-tab">
-          <img src="../images/myorders/ongoing.svg" style="width: 200px; height: 200px;" alt="ongoing" />
-          <h3>Order now for your orders to appear here.</h3>
-          <!-- <div class="card w-90">
-            <div class="row">
-              <div class="col-3">
-                <img src="../images/myorders/pizza.png" style="width: 90px; height: auto;" alt="pizza" />
-              </div>
-              <div class="col-9">
-                <h3>The Pizza Place</h3>
-                <p>Ordered Time : 20:36 | Order ID : 3456 Items : Cheese Garlic Bread</p>
-                <button class="btn-status"><img src="" alt="status" /></button>
-              </div>
-            </div>
-          </div> -->
+          <div v-if="!showOngoing">
+            <img
+              src="../images/myorders/ongoing.svg"
+              style="width: 200px; height: 200px;"
+              alt="ongoing"
+              @click="showOngoing = !showOngoing"
+            />
+            <h3>Order now for your orders to appear here.</h3>
+          </div>
+          <div v-else>
+            <FoodCard />
+            <FoodCard />
+            <FoodCard />
+          </div>
         </div>
         <div class="tab-pane fade" id="past-order" role="tabpanel" aria-labelledby="past-order-tab">
-          <img src="../images/myorders/past.svg" style="width: 200px; height: 200px;" alt="ongoing" />
-          <h3>Oops! Your past looks empty.</h3>
+          <div v-if="!showPast">
+            <img
+              src="../images/myorders/past.svg"
+              style="width: 200px; height: 200px;"
+              alt="ongoing"
+              @click="showPast = !showPast"
+            />
+            <h3>Oops! Your past looks empty.</h3>
+          </div>
+          <div v-else>
+            <FoodCard />
+          </div>
         </div>
       </div>
     </div>
@@ -63,8 +73,13 @@
 </template>
 <script scoped>
 import Navbar from "../components/Navbar.vue";
+import FoodCard from "../components/myorders/FoodCard.vue";
+
 export default {
-  components: { Navbar },
+  components: { Navbar, FoodCard },
+  data: function() {
+    return { showOngoing: false, showPast: false };
+  },
   methods: {
     goBack: function() {
       window.history.back();
@@ -139,25 +154,6 @@ ul.nav-pills {
   width: 100%;
   text-align: center;
   overflow: auto;
-}
-
-.card {
-  position: relative;
-  border-radius: 16px;
-  box-shadow: 0px 3px 6px #00000029;
-  height: fit-content;
-  padding: 10px;
-  text-align: left;
-  display: flex;
-  flex-direction: column;
-  align-items: left;
-  justify-content: center;
-  margin-bottom: 30px;
-  font-size: 16px;
-}
-
-.col-9 p {
-  color: #616b71;
 }
 
 .navbar {
