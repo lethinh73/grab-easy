@@ -34,7 +34,6 @@ A front-end mobile web application built with **Vue.js 3** that simulates a food
 * **Vue.js 3:** Core JavaScript framework.
 * **Vue Router 4:** Client-side routing.
 * **Axios:** (Present for future backend integration/mocking).
-* **PyQt5** (This seems like a leftover from the previous project you shared, if it's not used in this Vue project, remove it. I'll keep it out for now as the `package.json` doesn't indicate it.)
 * **Node.js (v14.x / v16.x LTS recommended):** Runtime environment and build tools.
 * **Vue CLI 4.x:** Project tooling.
 
@@ -58,15 +57,3 @@ A front-end mobile web application built with **Vue.js 3** that simulates a food
     npm run serve
     ```
     Access the UI at `http://localhost:8080` (use browser's mobile device emulation for best view).
-
----
-
-## Screenshots
-
-*(Replace these placeholders with actual links to your screenshots)*
-
-* **Login/Onboarding:** ![Login Screen](link-to-your-screenshot-11.35.14PM.png)
-* **User Profile:** ![Profile Screen](link-to-your-screenshot-11.35.58PM.png)
-* **Home/Outlets:** ![Home Screen](link-to-your-screenshot-11.36.12PM.jpg)
-
----
